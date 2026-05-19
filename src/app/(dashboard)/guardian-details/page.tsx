@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import Script from "next/script";
 const __inlineScripts = "// Data Table start\r\n    let table = new DataTable('#dataTable');\r\n    let tableTwo = new DataTable('#dataTableTwo');\r\n    let tableThree = new DataTable('#dataTableThree');\r\n    let tableFour = new DataTable('#dataTableFour');\r\n    let firstSemesterTable = new DataTable('#firstSemesterTable');\r\n    let monthlyTestJun = new DataTable('#monthlyTestJun');\r\n    let weeklyTestJun = new DataTable('#weeklyTestJun');\r\n    let weeklyTestMay = new DataTable('#weeklyTestMay');\r\n    let monthlyTestMay = new DataTable('#monthlyTestMay');\r\n    let dataTableLibrary = new DataTable('#dataTableLibrary');\r\n    let loginDetailsTable = new DataTable('#loginDetailsTable');\r\n\r\n    // ✅ Data Table start\r\n    $('.data-table').each(function () {\r\n        const $table = $(this);\r\n        const tableInstance = new DataTable(this);\r\n\r\n        // Handle search input (inside same wrapper)\r\n        $table.closest('.dataTable-wrapper').find('.dt-search .dt-input').on('keyup', function () {\r\n            tableInstance.search(this.value).draw();\r\n        });\r\n\r\n        // Handle page length change (inside same wrapper)\r\n        $table.closest('.dataTable-wrapper').find('.dt-length .dt-input').on('change', function () {\r\n            const value = $(this).val();\r\n            tableInstance.page.len(value).draw();\r\n        });\r\n    });\r\n    // ✅ Data Table end\r\n\r\n    // Dynamic Class added to the (absent/present/late/holiday)\r\n    $(document).ready(function () {\r\n        $('.attendance').each(function () {\r\n            let value = $(this).text().trim().toUpperCase();\r\n\r\n            if (value === 'P') {\r\n                $(this).addClass('text-success-600')\r\n            } else if (value === 'A') {\r\n                $(this).addClass('text-danger-600')\r\n            } else if (value === 'H') {\r\n                $(this).addClass('text-warning-600')\r\n            } else if (value === 'F') {\r\n                $(this).addClass('text-purple-600')\r\n            } else if (value === 'L') {\r\n                $(this).addClass('text-info-600')\r\n            }\r\n        });\r\n    });\r\n    // Dynamic Class added to the (absent/present/late/holiday)\r\n\r\n\r\n    // Custom accordion js start\r\n    $(document).on('click', '.custom-accordion-btn', function () {\r\n        $('.custom-accordion-btn').not(this).removeClass('active').siblings('.custom-accordion-content').slideUp();\r\n\r\n        // Toggle current one\r\n        $(this).toggleClass('active');\r\n        $(this).siblings('.custom-accordion-content').slideToggle();\r\n    });\r\n\r\n    // Keep first accordion open by default\r\n    $(document).ready(function () {\r\n        const firstAccordion = $('.custom-accordion-btn').first();\r\n        firstAccordion.addClass('active');\r\n        firstAccordion.siblings('.custom-accordion-content').show();\r\n    });\r\n    // Custom accordion js end\r\n\r\n\r\n    // Sidebar js start\r\n    $('.my-sidebar-btn').on('click', function () {\r\n        $('.my-sidebar').addClass('active');\r\n        $('.overlay').addClass('active');\r\n    });\r\n    $('.close-my-sidebar, .overlay').on('click', function () {\r\n        $('.my-sidebar').removeClass('active');\r\n        $('.overlay').removeClass('active');\r\n    });\r\n\r\n\r\n    $('.apply-leave-btn').on('click', function () {\r\n        $('.apply-leave').addClass('active');\r\n        $('.overlay').addClass('active');\r\n    });\r\n    $('.close-apply-leave, .overlay').on('click', function () {\r\n        $('.apply-leave').removeClass('active');\r\n        $('.overlay').removeClass('active');\r\n    });\r\n    // Sidebar js end\r\n\r\n    $('.collect-payroll-btn').on('click', function () {\r\n        $('.collect-payroll').addClass('active');\r\n        $('.overlay').addClass('active');\r\n    });\r\n    $('.close-collect-payroll, .overlay').on('click', function () {\r\n        $('.collect-payroll').removeClass('active');\r\n        $('.overlay').removeClass('active');\r\n    });\r\n    // Sidebar js end";
 
@@ -9,9 +10,9 @@ export default function GuardianDetailsPage() {
                   <div className="">
                       <h1 className="fw-semibold mb-4 h6 text-primary-light">Guardian Details</h1>
                       <div className="">
-                          <a href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </a>
-                          <a href="/guardian-list" className="text-secondary-light hover-text-primary hover-underline"> /
-                              Guardian</a>
+                          <Link href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </Link>
+                          <Link href="/guardian-list" className="text-secondary-light hover-text-primary hover-underline"> /
+                              Guardian</Link>
                           <span className="text-secondary-light">/ Guardian Details</span>
                       </div>
                   </div>
@@ -37,13 +38,13 @@ export default function GuardianDetailsPage() {
                                   <p className="mb-0">ID: <span className="text-primary-600 fw-semibold"> AD1256589</span>
                                   </p>
                                   <div className="mt-20 d-flex gap-16 w-100">
-                                      <a href="/edit-guardian"
+                                      <Link href="/edit-guardian"
                                           className="btn btn-primary-600 border fw-medium border-primary-600 text-md d-flex justify-content-center align-items-center gap-8 flex-grow-1 px-12 py-8 radius-8">
                                           <span className="d-flex text-lg">
                                               <i className="ri-edit-line"></i>
                                           </span>
                                           Edit
-                                      </a>
+                                      </Link>
                                   </div>
                               </div>
                               <div className="">

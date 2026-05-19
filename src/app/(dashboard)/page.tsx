@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import Script from "next/script";
 const __inlineScripts = "// ============================ Revenue Statistics Chart start ===============================\r\n  var options = {\r\n    series: [{\r\n      name: 'Total Fee',\r\n      data: [25, 35, 50, 60, 26, 20, 40, 20, 50, 16, 10, 40]\r\n    }, {\r\n      name: 'Collected Fee',\r\n      data: [15, 16, 24, 30, 20, 15, 20, 10, 25, 10, 6, 20]\r\n    }],\r\n    chart: {\r\n      type: 'bar',\r\n      height: 250,\r\n      stacked: true,\r\n      toolbar: {\r\n        show: false\r\n      },\r\n      zoom: {\r\n        enabled: true\r\n      }\r\n    },\r\n    colors: [\"#25A194\", \"#FF7A2C\"],\r\n    plotOptions: {\r\n      bar: {\r\n        horizontal: false,\r\n        columnWidth: \"50%\",\r\n        shape: \"pyramid\",\r\n      },\r\n    },\r\n    xaxis: {\r\n      categories: ['Jan', 'Feb', 'Mar', 'Apr',\r\n        'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'\r\n      ],\r\n    },\r\n    yaxis: {\r\n      labels: {\r\n        formatter: function (value) {\r\n          return \"$\" + value + \"k\";\r\n        },\r\n        style: {\r\n          fontSize: \"14px\"\r\n        }\r\n      },\r\n    },\r\n    legend: {\r\n      show: false,\r\n    },\r\n    fill: {\r\n      opacity: 1\r\n    }\r\n  };\r\n\r\n  var chart = new ApexCharts(document.querySelector(\"#revenueStatistic\"), options);\r\n  chart.render()\r\n  // ============================ Revenue Statistics Chart End ===============================\r\n\r\n  // ===================== Income Vs Expense Start =============================== \r\n  function createChartThree(chartId, color1, color2) {\r\n    var options = {\r\n      series: [{\r\n        name: 'Income',\r\n        data: [48, 35, 55, 32, 48, 30, 15, 50, 57]\r\n      }, {\r\n        name: 'Expense',\r\n        data: [12, 20, 15, 26, 22, 60, 40, 32, 25]\r\n      }],\r\n      legend: {\r\n        show: false\r\n      },\r\n      chart: {\r\n        type: 'area',\r\n        width: '100%',\r\n        height: 260,\r\n        toolbar: {\r\n          show: false\r\n        },\r\n        padding: {\r\n          left: 0,\r\n          right: 0,\r\n          top: 0,\r\n          bottom: 0\r\n        }\r\n      },\r\n      dataLabels: {\r\n        enabled: false\r\n      },\r\n      stroke: {\r\n        curve: 'stepline',\r\n        width: 2,\r\n        colors: [color1, color2],\r\n        lineCap: 'round'\r\n      },\r\n      grid: {\r\n        show: true,\r\n        borderColor: '#D1D5DB',\r\n        strokeDashArray: 1,\r\n        position: 'back',\r\n        xaxis: {\r\n          lines: {\r\n            show: false\r\n          }\r\n        },\r\n        yaxis: {\r\n          lines: {\r\n            show: true\r\n          }\r\n        },\r\n        row: {\r\n          colors: undefined,\r\n          opacity: 0.2\r\n        },\r\n        column: {\r\n          colors: undefined,\r\n          opacity: 0.2\r\n        },\r\n        padding: {\r\n          top: -20,\r\n          right: 0,\r\n          bottom: -10,\r\n          left: 0\r\n        },\r\n      },\r\n      colors: [color1, color2],\r\n      markers: {\r\n        colors: [color1, color2],\r\n        strokeWidth: 1,\r\n        size: 0,\r\n        hover: {\r\n          size: 10\r\n        }\r\n      },\r\n      xaxis: {\r\n        labels: {\r\n          show: false\r\n        },\r\n        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],\r\n        tooltip: {\r\n          enabled: false\r\n        },\r\n        labels: {\r\n          formatter: function (value) {\r\n            return value;\r\n          },\r\n          style: {\r\n            fontSize: \"14px\"\r\n          }\r\n        }\r\n      },\r\n      yaxis: {\r\n        labels: {\r\n          formatter: function (value) {\r\n            return \"$\" + value + \"k\";\r\n          },\r\n          style: {\r\n            fontSize: \"14px\"\r\n          }\r\n        },\r\n      },\r\n      tooltip: {\r\n        x: {\r\n          format: 'dd/MM/yy HH:mm'\r\n        }\r\n      },\r\n      fill: {\r\n        type: \"gradient\",\r\n        gradient: {\r\n          shade: \"light\",\r\n          type: \"vertical\",\r\n          opacityFrom: 0.4,\r\n          opacityTo: 0.05,\r\n          stops: [0, 100]\r\n        }\r\n      }\r\n    };\r\n\r\n    var chart = new ApexCharts(document.querySelector(`#${chartId}`), options);\r\n    chart.render();\r\n  }\r\n\r\n  createChartThree('incomeExpense', '#16a34a', '#FF9F29');\r\n  // ===================== Income Vs Expense End =============================== \r\n\r\n  // ================================ New Admissions Chart Start ================================ \r\n  var options = {\r\n    series: [40, 87, 87, 30],\r\n    colors: ['#0A51CE', '#25A194', '#FF7A2C', '#009F5E'],\r\n    labels: ['Health', 'Business', 'Lifestyle', 'Entertainment'],\r\n    legend: {\r\n      show: false\r\n    },\r\n    chart: {\r\n      type: 'donut',\r\n      height: 270,\r\n      sparkline: {\r\n        enabled: true // Remove whitespace\r\n      },\r\n      margin: {\r\n        top: 0,\r\n        right: 0,\r\n        bottom: 0,\r\n        left: 0\r\n      },\r\n      padding: {\r\n        top: 0,\r\n        right: 0,\r\n        bottom: 0,\r\n        left: 0\r\n      }\r\n    },\r\n    stroke: {\r\n      width: 2,\r\n    },\r\n    dataLabels: {\r\n      enabled: false\r\n    },\r\n    responsive: [{\r\n      breakpoint: 480,\r\n      options: {\r\n        chart: {\r\n          width: 200\r\n        },\r\n        legend: {\r\n          position: 'bottom'\r\n        }\r\n      }\r\n    }],\r\n  };\r\n\r\n  var chart = new ApexCharts(document.querySelector(\"#newAdmissions\"), options);\r\n  chart.render();\r\n  // ================================ New Admissions Chart End ================================ \r\n\r\n  // ================================ Animated Radial Progress Bar Start ================================ \r\n  $('svg.radial-progress').each(function (index, value) {\r\n    $(this).find($('circle.complete')).removeAttr('style');\r\n  });\r\n\r\n  // Activate progress animation on scroll\r\n  $(window).scroll(function () {\r\n    $('svg.radial-progress').each(function (index, value) {\r\n      // Trigger when the element is fully in the viewport\r\n      if (\r\n        $(window).scrollTop() >= $(this).offset().top - $(window).height() &&\r\n        $(window).scrollTop() <= $(this).offset().top + $(this).height()\r\n      ) {\r\n        // Get percentage of progress\r\n        const percent = $(value).data('percentage');\r\n        // Get radius of the svg's circle.complete\r\n        const radius = $(this).find($('circle.complete')).attr('r');\r\n        // Get circumference (2πr)\r\n        const circumference = 2 * Math.PI * radius;\r\n        // Get stroke-dashoffset value based on the percentage of the circumference\r\n        const strokeDashOffset = circumference - ((percent * circumference) / 100);\r\n        // Transition progress for 1.25 seconds\r\n        $(this).find($('circle.complete')).animate({ 'stroke-dashoffset': strokeDashOffset }, 1250);\r\n      }\r\n    });\r\n  }).trigger('scroll');\r\n  // ================================ Animated Radial Progress Bar End ================================\r\n\r\n  // ============================= Calendar Js Start =================================\r\n  let display = document.querySelector(\".display\");\r\n  let days = document.querySelector(\".days\");\r\n  let previous = document.querySelector(\".left\");\r\n  let next = document.querySelector(\".right\");\r\n\r\n  let date = new Date();\r\n\r\n  let year = date.getFullYear();\r\n  let month = date.getMonth();\r\n\r\n  function displayCalendar() {\r\n    const firstDay = new Date(year, month, 1);\r\n\r\n    const lastDay = new Date(year, month + 1, 0);\r\n\r\n    const firstDayIndex = firstDay.getDay(); //4\r\n\r\n    const numberOfDays = lastDay.getDate(); //31\r\n\r\n    let formattedDate = date.toLocaleString(\"en-US\", {\r\n      month: \"long\",\r\n      year: \"numeric\"\r\n    });\r\n\r\n    display.innerHTML = `${formattedDate}`;\r\n\r\n    for (let x = 1; x <= firstDayIndex; x++) {\r\n      const div = document.createElement(\"div\");\r\n      div.innerHTML += \"\";\r\n\r\n      days.appendChild(div);\r\n    }\r\n\r\n    for (let i = 1; i <= numberOfDays; i++) {\r\n      let div = document.createElement(\"div\");\r\n      let currentDate = new Date(year, month, i);\r\n\r\n      div.dataset.date = currentDate.toDateString();\r\n\r\n      div.innerHTML += i;\r\n      days.appendChild(div);\r\n      if (\r\n        currentDate.getFullYear() === new Date().getFullYear() &&\r\n        currentDate.getMonth() === new Date().getMonth() &&\r\n        currentDate.getDate() === new Date().getDate()\r\n      ) {\r\n        div.classList.add(\"current-date\");\r\n      }\r\n    }\r\n  }\r\n\r\n  // Call the function to display the calendar\r\n  displayCalendar();\r\n\r\n  previous.addEventListener(\"click\", () => {\r\n    days.innerHTML = \"\";\r\n\r\n    if (month < 0) {\r\n      month = 11;\r\n      year = year - 1;\r\n    }\r\n    month = month - 1;\r\n    date.setMonth(month);\r\n    displayCalendar();\r\n  });\r\n\r\n  next.addEventListener(\"click\", () => {\r\n    days.innerHTML = \"\";\r\n\r\n    if (month > 11) {\r\n      month = 0;\r\n      year = year + 1;\r\n    }\r\n\r\n    month = month + 1;\r\n    date.setMonth(month);\r\n\r\n    displayCalendar();\r\n  });\r\n  // ============================= Calendar Js End =================================";
 
@@ -489,12 +490,12 @@ export default function IndexPage() {
                                   <span className="text-xs text-secondary-light line-height-1 mb-2">AM</span>
                                 </div>
                                 <p className="text-secondary-light mt-4 mb-2 text-sm">Marketing Strategy Kickoff</p>
-                                <p className="text-xs text-secondary-light mb-0">Lead by <a href="javascript:void(0)"
-                                    className="text-primary-600 hover-underline">Robert Fox</a></p>
+                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="javascript:void(0)"
+                                    className="text-primary-600 hover-underline">Robert Fox</Link></p>
                               </div>
                               <div>
-                                <a href="javascript:void(0)"
-                                  className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                <Link href="javascript:void(0)"
+                                  className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                               </div>
                             </div>
                             <div className="d-flex align-items-center justify-content-between gap-16">
@@ -504,12 +505,12 @@ export default function IndexPage() {
                                   <span className="text-xs text-secondary-light line-height-1 mb-2">AM</span>
                                 </div>
                                 <p className="text-secondary-light mt-4 mb-2 text-sm">Product Design Brainstorm</p>
-                                <p className="text-xs text-secondary-light mb-0">Lead by <a href="javascript:void(0)"
-                                    className="text-primary-600 hover-underline">Leslie Alexander</a></p>
+                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="javascript:void(0)"
+                                    className="text-primary-600 hover-underline">Leslie Alexander</Link></p>
                               </div>
                               <div>
-                                <a href="javascript:void(0)"
-                                  className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                <Link href="javascript:void(0)"
+                                  className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                               </div>
                             </div>
                             <div className="d-flex align-items-center justify-content-between gap-16">
@@ -519,12 +520,12 @@ export default function IndexPage() {
                                   <span className="text-xs text-secondary-light line-height-1 mb-2">PM</span>
                                 </div>
                                 <p className="text-secondary-light mt-4 mb-2 text-sm">Client Feedback Review</p>
-                                <p className="text-xs text-secondary-light mb-0">Lead by <a href="javascript:void(0)"
-                                    className="text-primary-600 hover-underline">Courtney Henry</a></p>
+                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="javascript:void(0)"
+                                    className="text-primary-600 hover-underline">Courtney Henry</Link></p>
                               </div>
                               <div>
-                                <a href="javascript:void(0)"
-                                  className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                <Link href="javascript:void(0)"
+                                  className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                               </div>
                             </div>
                             <div className="d-flex align-items-center justify-content-between gap-16">
@@ -534,12 +535,12 @@ export default function IndexPage() {
                                   <span className="text-xs text-secondary-light line-height-1 mb-2">PM</span>
                                 </div>
                                 <p className="text-secondary-light mt-4 mb-2 text-sm">Sprint Planning & Task Allocation</p>
-                                <p className="text-xs text-secondary-light mb-0">Lead by <a href="javascript:void(0)"
-                                    className="text-primary-600 hover-underline">Eleanor Pena</a></p>
+                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="javascript:void(0)"
+                                    className="text-primary-600 hover-underline">Eleanor Pena</Link></p>
                               </div>
                               <div>
-                                <a href="javascript:void(0)"
-                                  className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                <Link href="javascript:void(0)"
+                                  className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                               </div>
                             </div>
                             <div className="d-flex align-items-center justify-content-between gap-16">
@@ -549,12 +550,12 @@ export default function IndexPage() {
                                   <span className="text-xs text-secondary-light line-height-1 mb-2">PM</span>
                                 </div>
                                 <p className="text-secondary-light mt-4 mb-2 text-sm">Client Feedback Review</p>
-                                <p className="text-xs text-secondary-light mb-0">Lead by <a href="javascript:void(0)"
-                                    className="text-primary-600 hover-underline">John</a></p>
+                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="javascript:void(0)"
+                                    className="text-primary-600 hover-underline">John</Link></p>
                               </div>
                               <div>
-                                <a href="javascript:void(0)"
-                                  className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                <Link href="javascript:void(0)"
+                                  className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                               </div>
                             </div>
                             <div className="d-flex align-items-center justify-content-between gap-16">
@@ -564,12 +565,12 @@ export default function IndexPage() {
                                   <span className="text-xs text-secondary-light line-height-1 mb-2">AM</span>
                                 </div>
                                 <p className="text-secondary-light mt-4 mb-2 text-sm">Product Design Brainstorm</p>
-                                <p className="text-xs text-secondary-light mb-0">Lead by <a href="javascript:void(0)"
-                                    className="text-primary-600 hover-underline">Leslie Alexander</a></p>
+                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="javascript:void(0)"
+                                    className="text-primary-600 hover-underline">Leslie Alexander</Link></p>
                               </div>
                               <div>
-                                <a href="javascript:void(0)"
-                                  className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                <Link href="javascript:void(0)"
+                                  className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                               </div>
                             </div>
                           </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ThemeCustomization from "@/components/ThemeCustomization";
 import MobileOverlay from "@/components/MobileOverlay";
 
@@ -16,9 +17,9 @@ export default function RegisterPage() {
           <div className="lg-w-50 px-24 py-40 d-flex justify-content-center align-items-center">
               <div className="max-w-540-px mx-auto w-100">
       
-                  <a href="/">
+                  <Link href="/">
                       <img src="/assets/images/logo.png" alt="Logo" />
-                  </a>
+                  </Link>
       
                   <div className="mt-48 mb-32">
                       <h1 className="h6 fw-bold text-primary-light">Create Your Account 🚀</h1>
@@ -93,8 +94,8 @@ export default function RegisterPage() {
                       
                       <div className="form-check style-check d-flex align-items-center">
                           <input className="form-check-input border border-neutral-400" type="checkbox" value="" id="remeber" />
-                          <label className="form-check-label" htmlFor="remeber"> I agree to the <a href="#"
-                                  className="text-primary-600 text-decoration-underline">Terms & Conditions</a> </label>
+                          <label className="form-check-label" htmlFor="remeber"> I agree to the <Link href="#"
+                                  className="text-primary-600 text-decoration-underline">Terms & Conditions</Link> </label>
                       </div>
       
                       
@@ -107,9 +108,9 @@ export default function RegisterPage() {
                   
                   <div className="mt-24 text-center text-sm">
                       Already have an account?
-                      <a href="/login" className="text-primary-600 fw-semibold text-decoration-underline">
+                      <Link href="/login" className="text-primary-600 fw-semibold text-decoration-underline">
                           Log In
-                      </a>
+                      </Link>
                   </div>
       
               </div>

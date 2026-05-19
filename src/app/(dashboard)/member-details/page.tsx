@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import Script from "next/script";
 const __inlineScripts = "// Data Table start\r\n    let table = new DataTable('#dataTable');\r\n\r\n    // ✅ Data Table start\r\n    $('.data-table').each(function () {\r\n        const $table = $(this);\r\n        const tableInstance = new DataTable(this);\r\n\r\n        // Handle search input (inside same wrapper)\r\n        $table.closest('.dataTable-wrapper').find('.dt-search .dt-input').on('keyup', function () {\r\n            tableInstance.search(this.value).draw();\r\n        });\r\n\r\n        // Handle page length change (inside same wrapper)\r\n        $table.closest('.dataTable-wrapper').find('.dt-length .dt-input').on('change', function () {\r\n            const value = $(this).val();\r\n            tableInstance.page.len(value).draw();\r\n        });\r\n    });\r\n    // ✅ Data Table end\r\n\r\n    // Sidebar js start\r\n    $('.my-sidebar-btn').on('click', function () {\r\n        $('.my-sidebar').addClass('active');\r\n        $('.overlay').addClass('active');\r\n    });\r\n    $('.close-my-sidebar, .overlay').on('click', function () {\r\n        $('.my-sidebar').removeClass('active');\r\n        $('.overlay').removeClass('active');\r\n    });\r\n    // Sidebar js end";
 
@@ -9,18 +10,18 @@ export default function MemberDetailsPage() {
         <div className="">
           <h1 className="fw-semibold mb-4 h6 text-primary-light">Member Details</h1>
           <div className="">
-            <a href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </a>
-            <a href="/books-list" className="text-secondary-light hover-text-primary hover-underline "> /
-              Library</a>
+            <Link href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </Link>
+            <Link href="/books-list" className="text-secondary-light hover-text-primary hover-underline "> /
+              Library</Link>
             <span className="text-secondary-light">/ Member Details</span>
           </div>
         </div>
-        <a href="/add-new-teacher" className="btn btn-primary-600 d-flex align-items-center gap-6 d-none">
+        <Link href="/add-new-teacher" className="btn btn-primary-600 d-flex align-items-center gap-6 d-none">
           <span className="d-flex text-md">
             <i className="ri-add-large-line"></i>
           </span>
           Add Teacher
-        </a>
+        </Link>
       </div>
       
               <div className="mt-24">
@@ -44,13 +45,13 @@ export default function MemberDetailsPage() {
                                           </span>
                                           Suspend
                                       </button>
-                                      <a href="/edit-student"
+                                      <Link href="/edit-student"
                                           className="btn btn-primary-600 border fw-medium border-primary-600 text-md d-flex justify-content-center align-items-center gap-8 flex-grow-1 px-12 py-8 radius-8">
                                           <span className="d-flex text-lg">
                                               <i className="ri-edit-line"></i>
                                           </span>
                                           Edit
-                                      </a>
+                                      </Link>
                                   </div>
                               </div>
                               <div className="">

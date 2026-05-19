@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import Script from "next/script";
 const __inlineScripts = "let table = new DataTable('#dataTable');\r\n\r\n    // ✅ Data Table start\r\n    $('.data-table').each(function () {\r\n        const $table = $(this);\r\n        const tableInstance = new DataTable(this);\r\n\r\n        // Handle search input (inside same wrapper)\r\n        $table.closest('.dataTable-wrapper').find('.dt-search .dt-input').on('keyup', function () {\r\n            tableInstance.search(this.value).draw();\r\n        });\r\n\r\n        // Handle page length change (inside same wrapper)\r\n        $table.closest('.dataTable-wrapper').find('.dt-length .dt-input').on('change', function () {\r\n            const value = $(this).val();\r\n            tableInstance.page.len(value).draw();\r\n        });\r\n    });\r\n    // ✅ Data Table end";
 
@@ -9,18 +10,18 @@ export default function EmployeeListPage() {
         <div className="">
           <h1 className="fw-semibold mb-4 h6 text-primary-light">Employee List</h1>
           <div className="">
-            <a href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </a>
-            <a href="/employee-list" className="text-secondary-light hover-text-primary hover-underline "> /
-              HRM</a>
+            <Link href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </Link>
+            <Link href="/employee-list" className="text-secondary-light hover-text-primary hover-underline "> /
+              HRM</Link>
             <span className="text-secondary-light">/ Employee List</span>
           </div>
         </div>
-        <a href="/add-new-student" className="btn btn-primary-600 d-flex align-items-center gap-6 ">
+        <Link href="/add-new-student" className="btn btn-primary-600 d-flex align-items-center gap-6 ">
           <span className="d-flex text-md">
             <i className="ri-add-large-line"></i>
           </span>
           Add Employee
-        </a>
+        </Link>
       </div>
       
               <div className="mt-24">
@@ -198,18 +199,18 @@ export default function EmployeeListPage() {
                                                   </button>
                                                   <ul className="dropdown-menu dropdown-menu-lg-end border p-12">
                                                       <li>
-                                                          <a href="/student-list"
+                                                          <Link href="/student-list"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-user-3-line"></i>
                                                               View Student
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
-                                                          <a href="javascript:void(0)"
+                                                          <Link href="javascript:void(0)"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i>
                                                               Edit
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
                                                           <button
@@ -264,18 +265,18 @@ export default function EmployeeListPage() {
                                                   </button>
                                                   <ul className="dropdown-menu dropdown-menu-lg-end border p-12">
                                                       <li>
-                                                          <a href="/student-list"
+                                                          <Link href="/student-list"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-user-3-line"></i>
                                                               View Student
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
-                                                          <a href="javascript:void(0)"
+                                                          <Link href="javascript:void(0)"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i>
                                                               Edit
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
                                                           <button
@@ -327,12 +328,12 @@ export default function EmployeeListPage() {
                                                       <iconify-icon icon="tabler:dots-vertical"></iconify-icon>
                                                   </button>
                                                   <ul className="dropdown-menu dropdown-menu-lg-end border p-12">
-                                                      <li><a href="/student-list"
+                                                      <li><Link href="/student-list"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6"><i
-                                                                  className="ri-user-3-line"></i>View Student</a></li>
-                                                      <li><a href="javascript:void(0)"
+                                                                  className="ri-user-3-line"></i>View Student</Link></li>
+                                                      <li><Link href="javascript:void(0)"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6"><i
-                                                                  className="ri-edit-2-line"></i>Edit</a></li>
+                                                                  className="ri-edit-2-line"></i>Edit</Link></li>
                                                       <li><button
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6"><i
                                                                   className="ri-error-warning-line"></i>Inactive</button></li>
@@ -377,12 +378,12 @@ export default function EmployeeListPage() {
                                                       <iconify-icon icon="tabler:dots-vertical"></iconify-icon>
                                                   </button>
                                                   <ul className="dropdown-menu dropdown-menu-lg-end border p-12">
-                                                      <li><a href="/student-list"
+                                                      <li><Link href="/student-list"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6"><i
-                                                                  className="ri-user-3-line"></i>View Student</a></li>
-                                                      <li><a href="javascript:void(0)"
+                                                                  className="ri-user-3-line"></i>View Student</Link></li>
+                                                      <li><Link href="javascript:void(0)"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6"><i
-                                                                  className="ri-edit-2-line"></i>Edit</a></li>
+                                                                  className="ri-edit-2-line"></i>Edit</Link></li>
                                                       <li><button
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6"><i
                                                                   className="ri-error-warning-line"></i>Inactive</button></li>
@@ -427,12 +428,12 @@ export default function EmployeeListPage() {
                                                       <iconify-icon icon="tabler:dots-vertical"></iconify-icon>
                                                   </button>
                                                   <ul className="dropdown-menu dropdown-menu-lg-end border p-12">
-                                                      <li><a href="/student-list"
+                                                      <li><Link href="/student-list"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6"><i
-                                                                  className="ri-user-3-line"></i>View Student</a></li>
-                                                      <li><a href="javascript:void(0)"
+                                                                  className="ri-user-3-line"></i>View Student</Link></li>
+                                                      <li><Link href="javascript:void(0)"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6"><i
-                                                                  className="ri-edit-2-line"></i>Edit</a></li>
+                                                                  className="ri-edit-2-line"></i>Edit</Link></li>
                                                       <li><button
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6"><i
                                                                   className="ri-error-warning-line"></i>Inactive</button></li>
@@ -478,18 +479,18 @@ export default function EmployeeListPage() {
                                                   </button>
                                                   <ul className="dropdown-menu dropdown-menu-lg-end border p-12">
                                                       <li>
-                                                          <a href="/student-list"
+                                                          <Link href="/student-list"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-user-3-line"></i>
                                                               View Student
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
-                                                          <a href="javascript:void(0)"
+                                                          <Link href="javascript:void(0)"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i>
                                                               Edit
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
                                                           <button
@@ -543,18 +544,18 @@ export default function EmployeeListPage() {
                                                   </button>
                                                   <ul className="dropdown-menu dropdown-menu-lg-end border p-12">
                                                       <li>
-                                                          <a href="/student-list"
+                                                          <Link href="/student-list"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-user-3-line"></i>
                                                               View Student
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
-                                                          <a href="javascript:void(0)"
+                                                          <Link href="javascript:void(0)"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i>
                                                               Edit
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
                                                           <button
@@ -608,18 +609,18 @@ export default function EmployeeListPage() {
                                                   </button>
                                                   <ul className="dropdown-menu dropdown-menu-lg-end border p-12">
                                                       <li>
-                                                          <a href="/student-list"
+                                                          <Link href="/student-list"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-user-3-line"></i>
                                                               View Student
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
-                                                          <a href="javascript:void(0)"
+                                                          <Link href="javascript:void(0)"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i>
                                                               Edit
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
                                                           <button
@@ -673,18 +674,18 @@ export default function EmployeeListPage() {
                                                   </button>
                                                   <ul className="dropdown-menu dropdown-menu-lg-end border p-12">
                                                       <li>
-                                                          <a href="/student-list"
+                                                          <Link href="/student-list"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-user-3-line"></i>
                                                               View Student
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
-                                                          <a href="javascript:void(0)"
+                                                          <Link href="javascript:void(0)"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i>
                                                               Edit
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
                                                           <button
@@ -738,18 +739,18 @@ export default function EmployeeListPage() {
                                                   </button>
                                                   <ul className="dropdown-menu dropdown-menu-lg-end border p-12">
                                                       <li>
-                                                          <a href="/student-list"
+                                                          <Link href="/student-list"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-user-3-line"></i>
                                                               View Student
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
-                                                          <a href="javascript:void(0)"
+                                                          <Link href="javascript:void(0)"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i>
                                                               Edit
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
                                                           <button
@@ -803,16 +804,16 @@ export default function EmployeeListPage() {
                                                   </button>
                                                   <ul className="dropdown-menu dropdown-menu-lg-end border p-12">
                                                       <li>
-                                                          <a href="/student-list"
+                                                          <Link href="/student-list"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-user-3-line"></i> View Student
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
-                                                          <a href="javascript:void(0)"
+                                                          <Link href="javascript:void(0)"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i> Edit
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
                                                           <button
@@ -866,16 +867,16 @@ export default function EmployeeListPage() {
                                                   </button>
                                                   <ul className="dropdown-menu dropdown-menu-lg-end border p-12">
                                                       <li>
-                                                          <a href="/student-list"
+                                                          <Link href="/student-list"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-user-3-line"></i> View Student
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
-                                                          <a href="javascript:void(0)"
+                                                          <Link href="javascript:void(0)"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i> Edit
-                                                          </a>
+                                                          </Link>
                                                       </li>
                                                       <li>
                                                           <button

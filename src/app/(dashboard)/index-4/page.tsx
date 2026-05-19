@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import Script from "next/script";
 const __inlineScripts = "// ===================== Average Enrollment Rate Start =============================== \r\n    function createChartTwo(chartId, color1, color2) {\r\n        var options = {\r\n            series: [{\r\n                name: 'Free Course',\r\n                data: [48, 35, 55, 32, 48, 30, 55, 50, 57]\r\n            }, {\r\n                name: 'Paid Course',\r\n                data: [12, 20, 15, 26, 22, 60, 40, 48, 25]\r\n            }],\r\n            legend: {\r\n                show: false\r\n            },\r\n            chart: {\r\n                type: 'area',\r\n                width: '100%',\r\n                height: 210,\r\n                toolbar: {\r\n                    show: false\r\n                },\r\n                padding: {\r\n                    left: 0,\r\n                    right: 0,\r\n                    top: 0,\r\n                    bottom: 0\r\n                }\r\n            },\r\n            dataLabels: {\r\n                enabled: false\r\n            },\r\n            stroke: {\r\n                curve: 'smooth',\r\n                width: 3,\r\n                colors: [color1, color2], // Use two colors for the lines\r\n                lineCap: 'round'\r\n            },\r\n            grid: {\r\n                show: true,\r\n                borderColor: '#D1D5DB',\r\n                strokeDashArray: 1,\r\n                position: 'back',\r\n                xaxis: {\r\n                    lines: {\r\n                        show: false\r\n                    }\r\n                },\r\n                yaxis: {\r\n                    lines: {\r\n                        show: true\r\n                    }\r\n                },\r\n                row: {\r\n                    colors: undefined,\r\n                    opacity: 0.5\r\n                },\r\n                column: {\r\n                    colors: undefined,\r\n                    opacity: 0.5\r\n                },\r\n                padding: {\r\n                    top: -20,\r\n                    right: 0,\r\n                    bottom: -10,\r\n                    left: 0\r\n                },\r\n            },\r\n            colors: [color1, color2],\r\n            markers: {\r\n                colors: [color1, color2], // Use two colors for the markers\r\n                strokeWidth: 3,\r\n                size: 0,\r\n                hover: {\r\n                    size: 10\r\n                }\r\n            },\r\n            xaxis: {\r\n                labels: {\r\n                    show: false\r\n                },\r\n                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],\r\n                tooltip: {\r\n                    enabled: false\r\n                },\r\n                labels: {\r\n                    formatter: function (value) {\r\n                        return value;\r\n                    },\r\n                    style: {\r\n                        fontSize: \"14px\"\r\n                    }\r\n                }\r\n            },\r\n            yaxis: {\r\n                labels: {\r\n                    style: {\r\n                        fontSize: \"14px\"\r\n                    }\r\n                },\r\n            },\r\n            tooltip: {\r\n                x: {\r\n                    format: 'dd/MM/yy HH:mm'\r\n                }\r\n            }\r\n        };\r\n\r\n        var chart = new ApexCharts(document.querySelector(`#${chartId}`), options);\r\n        chart.render();\r\n    }\r\n\r\n    createChartTwo('courseActivityChart', '#487FFF', '#FF9F29');\r\n    // ===================== Average Enrollment Rate End =============================== \r\n\r\n    //============================= ✅ Data Table start =============================\r\n    let table = new DataTable('#dataTable');\r\n    $('.data-table').each(function () {\r\n        const $table = $(this);\r\n        const tableInstance = new DataTable(this);\r\n\r\n        // Handle search input (inside same wrapper)\r\n        $table.closest('.dataTable-wrapper').find('.dt-search .dt-input').on('keyup', function () {\r\n            tableInstance.search(this.value).draw();\r\n        });\r\n\r\n        // Handle page length change (inside same wrapper)\r\n        $table.closest('.dataTable-wrapper').find('.dt-length .dt-input').on('change', function () {\r\n            const value = $(this).val();\r\n            tableInstance.page.len(value).draw();\r\n        });\r\n    });\r\n    //============================= ✅ Data Table end =============================";
 
@@ -733,13 +734,13 @@ export default function Index4Page() {
                                                           <p className="text-secondary-light mt-4 mb-2 text-sm">Marketing Strategy
                                                               Kickoff
                                                           </p>
-                                                          <p className="text-xs text-secondary-light mb-0">Lead by <a
+                                                          <p className="text-xs text-secondary-light mb-0">Lead by <Link
                                                                   href="javascript:void(0)"
-                                                                  className="text-primary-600 hover-underline">Robert Fox</a></p>
+                                                                  className="text-primary-600 hover-underline">Robert Fox</Link></p>
                                                       </div>
                                                       <div>
-                                                          <a href="javascript:void(0)"
-                                                              className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                                          <Link href="javascript:void(0)"
+                                                              className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                                                       </div>
                                                   </div>
                                                   <div className="d-flex align-items-center justify-content-between gap-16">
@@ -752,15 +753,15 @@ export default function Index4Page() {
                                                           <p className="text-secondary-light mt-4 mb-2 text-sm">Product Design
                                                               Brainstorm
                                                           </p>
-                                                          <p className="text-xs text-secondary-light mb-0">Lead by <a
+                                                          <p className="text-xs text-secondary-light mb-0">Lead by <Link
                                                                   href="javascript:void(0)"
                                                                   className="text-primary-600 hover-underline">Leslie
-                                                                  Alexander</a>
+                                                                  Alexander</Link>
                                                           </p>
                                                       </div>
                                                       <div>
-                                                          <a href="javascript:void(0)"
-                                                              className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                                          <Link href="javascript:void(0)"
+                                                              className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                                                       </div>
                                                   </div>
                                                   <div className="d-flex align-items-center justify-content-between gap-16">
@@ -773,14 +774,14 @@ export default function Index4Page() {
                                                           <p className="text-secondary-light mt-4 mb-2 text-sm">Client Feedback
                                                               Review
                                                           </p>
-                                                          <p className="text-xs text-secondary-light mb-0">Lead by <a
+                                                          <p className="text-xs text-secondary-light mb-0">Lead by <Link
                                                                   href="javascript:void(0)"
-                                                                  className="text-primary-600 hover-underline">Courtney Henry</a>
+                                                                  className="text-primary-600 hover-underline">Courtney Henry</Link>
                                                           </p>
                                                       </div>
                                                       <div>
-                                                          <a href="javascript:void(0)"
-                                                              className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                                          <Link href="javascript:void(0)"
+                                                              className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                                                       </div>
                                                   </div>
                                                   <div className="d-flex align-items-center justify-content-between gap-16">
@@ -794,14 +795,14 @@ export default function Index4Page() {
                                                               &amp;
                                                               Task
                                                               Allocation</p>
-                                                          <p className="text-xs text-secondary-light mb-0">Lead by <a
+                                                          <p className="text-xs text-secondary-light mb-0">Lead by <Link
                                                                   href="javascript:void(0)"
-                                                                  className="text-primary-600 hover-underline">Eleanor Pena</a>
+                                                                  className="text-primary-600 hover-underline">Eleanor Pena</Link>
                                                           </p>
                                                       </div>
                                                       <div>
-                                                          <a href="javascript:void(0)"
-                                                              className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                                          <Link href="javascript:void(0)"
+                                                              className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                                                       </div>
                                                   </div>
                                                   <div className="d-flex align-items-center justify-content-between gap-16">
@@ -814,13 +815,13 @@ export default function Index4Page() {
                                                           <p className="text-secondary-light mt-4 mb-2 text-sm">Client Feedback
                                                               Review
                                                           </p>
-                                                          <p className="text-xs text-secondary-light mb-0">Lead by <a
+                                                          <p className="text-xs text-secondary-light mb-0">Lead by <Link
                                                                   href="javascript:void(0)"
-                                                                  className="text-primary-600 hover-underline">John</a></p>
+                                                                  className="text-primary-600 hover-underline">John</Link></p>
                                                       </div>
                                                       <div>
-                                                          <a href="javascript:void(0)"
-                                                              className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                                          <Link href="javascript:void(0)"
+                                                              className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                                                       </div>
                                                   </div>
                                               </div>

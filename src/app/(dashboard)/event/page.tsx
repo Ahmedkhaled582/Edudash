@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import Script from "next/script";
 const __inlineScripts = "// Flat pickr or date picker js \r\n    function getDatePicker(receiveID) {\r\n        flatpickr(receiveID, {\r\n            enableTime: true,\r\n            dateFormat: \"d/m/Y H:i\",\r\n        });\r\n    }\r\n    getDatePicker('#startDate');\r\n    getDatePicker('#endDate');\r\n\r\n    getDatePicker('#editstartDate');\r\n    getDatePicker('#editendDate');\r\n\r\n\r\n    // Sidebar js start\r\n    $('.my-sidebar-btn').on('click', function () {\r\n        $('.my-sidebar').addClass('active');\r\n        $('.overlay').addClass('active');\r\n    });\r\n    $('.close-my-sidebar, .overlay').on('click', function () {\r\n        $('.my-sidebar').removeClass('active');\r\n        $('.overlay').removeClass('active');\r\n    });\r\n\r\n\r\n    $('.edit-sidebar-btn').on('click', function () {\r\n        $('.edit-sidebar').addClass('active');\r\n        $('.overlay').addClass('active');\r\n    });\r\n    $('.close-edit-sidebar, .overlay').on('click', function () {\r\n        $('.edit-sidebar').removeClass('active');\r\n        $('.overlay').removeClass('active');\r\n    });\r\n    // Sidebar js end";
 
@@ -9,7 +10,7 @@ export default function EventPage() {
                   <div className="">
                       <span className="fw-semibold mb-4 h6 text-primary-light d-block">Event </span>
                       <div className="">
-                          <a href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </a>
+                          <Link href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </Link>
                           <span className="text-secondary-light">/ Event</span>
                       </div>
                   </div>

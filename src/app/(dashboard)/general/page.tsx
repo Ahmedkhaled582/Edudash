@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import Script from "next/script";
 const __inlineScripts = "// ================== Image Upload Js Start ===========================\r\n    function readURL(input, previewElementId) {\r\n        if (input.files && input.files[0]) {\r\n            var reader = new FileReader();\r\n            reader.onload = function (e) {\r\n                $('#' + previewElementId).css('background-image', 'url(' + e.target.result + ')');\r\n                $('#' + previewElementId).hide();\r\n                $('#' + previewElementId).fadeIn(650);\r\n            }\r\n            reader.readAsDataURL(input.files[0]);\r\n        }\r\n    }\r\n\r\n    $(\"#imageUpload\").change(function () {\r\n        readURL(this, 'previewImage1');\r\n    });\r\n\r\n    $(\"#imageUploadTwo\").change(function () {\r\n        readURL(this, 'previewImage2');\r\n    });\r\n    // ================== Image Upload Js End ===========================";
 
@@ -9,9 +10,9 @@ export default function GeneralPage() {
                   <div className="">
                       <h1 className="fw-semibold mb-4 h6 text-primary-light">General </h1>
                       <div className="">
-                          <a href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </a>
-                          <a href="/general" className="text-secondary-light hover-text-primary hover-underline "> /
-                              Settings</a>
+                          <Link href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </Link>
+                          <Link href="/general" className="text-secondary-light hover-text-primary hover-underline "> /
+                              Settings</Link>
                           <span className="text-secondary-light">/ General</span>
                       </div>
                   </div>

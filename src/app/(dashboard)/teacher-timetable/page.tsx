@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import Script from "next/script";
 const __inlineScripts = "// Sidebar js start\r\n    $('.my-sidebar-btn').on('click', function () {\r\n        $('.my-sidebar').addClass('active');\r\n        $('.overlay').addClass('active');\r\n    });\r\n    $('.close-my-sidebar, .overlay').on('click', function () {\r\n        $('.my-sidebar').removeClass('active');\r\n        $('.overlay').removeClass('active');\r\n    });\r\n    // Sidebar js end\r\n\r\n    // Search Item input js start\r\n    $('.item-search-input').on('input', function () {\r\n        const inputValue = event.target.value.trim().toLowerCase();\r\n\r\n        let items = document.querySelectorAll('.attendance-card .card-title');\r\n        items.forEach(item => {\r\n            const itemText = item.innerText.trim().toLowerCase();\r\n\r\n            const matched = itemText.includes(inputValue);\r\n            if (matched) {\r\n                item.parentElement.classList.remove('d-none');\r\n            } else {\r\n                item.parentElement.classList.add('d-none');\r\n            }\r\n        });\r\n    });\r\n    // Search Item input js end";
 
@@ -9,7 +10,7 @@ export default function TeacherTimetablePage() {
                   <div className="">
                       <h1 className="fw-semibold mb-4 h6 text-primary-light">Teacher Timetable</h1>
                       <div className="">
-                          <a href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </a>
+                          <Link href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </Link>
       
                           <span className="text-secondary-light">/ Teacher Timetable</span>
                       </div>

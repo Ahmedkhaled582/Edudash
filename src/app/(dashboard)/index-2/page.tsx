@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import Script from "next/script";
 const __inlineScripts = "// ================================ Users Overview Donut chart Start ================================ \r\n    var options = {\r\n        series: [200, 200, 200, 200],\r\n        colors: ['#487FFF', '#9935FE', '#FF9F29', \"#45B369\"],\r\n        labels: ['Total Visitors', 'Registrations', 'Total Page Views', 'Registrations'],\r\n        legend: {\r\n            show: false\r\n        },\r\n        chart: {\r\n            type: 'donut',\r\n            height: 270,\r\n            sparkline: {\r\n                enabled: true // Remove whitespace\r\n            },\r\n            margin: {\r\n                top: 0,\r\n                right: 0,\r\n                bottom: 0,\r\n                left: 0\r\n            },\r\n            padding: {\r\n                top: 0,\r\n                right: 0,\r\n                bottom: 0,\r\n                left: 0\r\n            }\r\n        },\r\n        stroke: {\r\n            width: 0,\r\n        },\r\n        dataLabels: {\r\n            enabled: false\r\n        },\r\n        responsive: [{\r\n            breakpoint: 480,\r\n            options: {\r\n                chart: {\r\n                    width: 300\r\n                },\r\n                legend: {\r\n                    position: 'bottom'\r\n                }\r\n            }\r\n        }],\r\n    };\r\n\r\n    var chart = new ApexCharts(document.querySelector(\"#userOverviewDonutChart\"), options);\r\n    chart.render();\r\n    // ================================ Users Overview Donut chart End ================================ \r\n\r\n    // ============================= Calendar Js Start =================================\r\n    let display = document.querySelector(\".display\");\r\n    let days = document.querySelector(\".days\");\r\n    let previous = document.querySelector(\".left\");\r\n    let next = document.querySelector(\".right\");\r\n\r\n    let date = new Date();\r\n\r\n    let year = date.getFullYear();\r\n    let month = date.getMonth();\r\n\r\n    function displayCalendar() {\r\n        const firstDay = new Date(year, month, 1);\r\n\r\n        const lastDay = new Date(year, month + 1, 0);\r\n\r\n        const firstDayIndex = firstDay.getDay(); //4\r\n\r\n        const numberOfDays = lastDay.getDate(); //31\r\n\r\n        let formattedDate = date.toLocaleString(\"en-US\", {\r\n            month: \"long\",\r\n            year: \"numeric\"\r\n        });\r\n\r\n        display.innerHTML = `${formattedDate}`;\r\n\r\n        for (let x = 1; x <= firstDayIndex; x++) {\r\n            const div = document.createElement(\"div\");\r\n            div.innerHTML += \"\";\r\n\r\n            days.appendChild(div);\r\n        }\r\n\r\n        for (let i = 1; i <= numberOfDays; i++) {\r\n            let div = document.createElement(\"div\");\r\n            let currentDate = new Date(year, month, i);\r\n\r\n            div.dataset.date = currentDate.toDateString();\r\n\r\n            div.innerHTML += i;\r\n            days.appendChild(div);\r\n            if (\r\n                currentDate.getFullYear() === new Date().getFullYear() &&\r\n                currentDate.getMonth() === new Date().getMonth() &&\r\n                currentDate.getDate() === new Date().getDate()\r\n            ) {\r\n                div.classList.add(\"current-date\");\r\n            }\r\n        }\r\n    }\r\n\r\n    // Call the function to display the calendar\r\n    displayCalendar();\r\n\r\n    previous.addEventListener(\"click\", () => {\r\n        days.innerHTML = \"\";\r\n\r\n        if (month < 0) {\r\n            month = 11;\r\n            year = year - 1;\r\n        }\r\n        month = month - 1;\r\n        date.setMonth(month);\r\n        displayCalendar();\r\n    });\r\n\r\n    next.addEventListener(\"click\", () => {\r\n        days.innerHTML = \"\";\r\n\r\n        if (month > 11) {\r\n            month = 0;\r\n            year = year + 1;\r\n        }\r\n\r\n        month = month + 1;\r\n        date.setMonth(month);\r\n\r\n        displayCalendar();\r\n    });\r\n    // ============================= Calendar Js End =================================\r\n\r\n\r\n    let table = new DataTable('#dataTable');\r\n\r\n    //============================= ✅ Data Table start =============================\r\n    $('.data-table').each(function () {\r\n        const $table = $(this);\r\n        const tableInstance = new DataTable(this);\r\n\r\n        // Handle search input (inside same wrapper)\r\n        $table.closest('.dataTable-wrapper').find('.dt-search .dt-input').on('keyup', function () {\r\n            tableInstance.search(this.value).draw();\r\n        });\r\n\r\n        // Handle page length change (inside same wrapper)\r\n        $table.closest('.dataTable-wrapper').find('.dt-length .dt-input').on('change', function () {\r\n            const value = $(this).val();\r\n            tableInstance.page.len(value).draw();\r\n        });\r\n    });\r\n    //============================= ✅ Data Table end =============================";
 
@@ -32,9 +33,9 @@ export default function Index2Page() {
                                           <span className="text-white text-lg d-block">Class: 7</span>
                                           <span className="text-white text-lg d-block">Roll No: 03</span>
                                           <div className="mt-12">
-                                              <a href="/edit-teacher"
+                                              <Link href="/edit-teacher"
                                                   className="px-20 py-8 text-white bg-white bg-opacity-10 radius-6 fw-medium text-lg">Edit
-                                                  Profile</a>
+                                                  Profile</Link>
                                           </div>
                                       </div>
                                   </div>
@@ -737,13 +738,13 @@ export default function Index2Page() {
                                                   </div>
                                                   <p className="text-secondary-light mt-4 mb-2 text-sm">Marketing Strategy Kickoff
                                                   </p>
-                                                  <p className="text-xs text-secondary-light mb-0">Lead by <a
+                                                  <p className="text-xs text-secondary-light mb-0">Lead by <Link
                                                           href="javascript:void(0)"
-                                                          className="text-primary-600 hover-underline">Robert Fox</a></p>
+                                                          className="text-primary-600 hover-underline">Robert Fox</Link></p>
                                               </div>
                                               <div>
-                                                  <a href="javascript:void(0)"
-                                                      className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                                  <Link href="javascript:void(0)"
+                                                      className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                                               </div>
                                           </div>
                                           <div className="d-flex align-items-center justify-content-between gap-16">
@@ -754,13 +755,13 @@ export default function Index2Page() {
                                                   </div>
                                                   <p className="text-secondary-light mt-4 mb-2 text-sm">Product Design Brainstorm
                                                   </p>
-                                                  <p className="text-xs text-secondary-light mb-0">Lead by <a
+                                                  <p className="text-xs text-secondary-light mb-0">Lead by <Link
                                                           href="javascript:void(0)"
-                                                          className="text-primary-600 hover-underline">Leslie Alexander</a></p>
+                                                          className="text-primary-600 hover-underline">Leslie Alexander</Link></p>
                                               </div>
                                               <div>
-                                                  <a href="javascript:void(0)"
-                                                      className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                                  <Link href="javascript:void(0)"
+                                                      className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                                               </div>
                                           </div>
                                           <div className="d-flex align-items-center justify-content-between gap-16">
@@ -770,13 +771,13 @@ export default function Index2Page() {
                                                       <span className="text-xs text-secondary-light line-height-1 mb-2">PM</span>
                                                   </div>
                                                   <p className="text-secondary-light mt-4 mb-2 text-sm">Client Feedback Review</p>
-                                                  <p className="text-xs text-secondary-light mb-0">Lead by <a
+                                                  <p className="text-xs text-secondary-light mb-0">Lead by <Link
                                                           href="javascript:void(0)"
-                                                          className="text-primary-600 hover-underline">Courtney Henry</a></p>
+                                                          className="text-primary-600 hover-underline">Courtney Henry</Link></p>
                                               </div>
                                               <div>
-                                                  <a href="javascript:void(0)"
-                                                      className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                                  <Link href="javascript:void(0)"
+                                                      className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                                               </div>
                                           </div>
                                           <div className="d-flex align-items-center justify-content-between gap-16">
@@ -787,13 +788,13 @@ export default function Index2Page() {
                                                   </div>
                                                   <p className="text-secondary-light mt-4 mb-2 text-sm">Sprint Planning &amp; Task
                                                       Allocation</p>
-                                                  <p className="text-xs text-secondary-light mb-0">Lead by <a
+                                                  <p className="text-xs text-secondary-light mb-0">Lead by <Link
                                                           href="javascript:void(0)"
-                                                          className="text-primary-600 hover-underline">Eleanor Pena</a></p>
+                                                          className="text-primary-600 hover-underline">Eleanor Pena</Link></p>
                                               </div>
                                               <div>
-                                                  <a href="javascript:void(0)"
-                                                      className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                                  <Link href="javascript:void(0)"
+                                                      className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                                               </div>
                                           </div>
                                           <div className="d-flex align-items-center justify-content-between gap-16">
@@ -803,13 +804,13 @@ export default function Index2Page() {
                                                       <span className="text-xs text-secondary-light line-height-1 mb-2">PM</span>
                                                   </div>
                                                   <p className="text-secondary-light mt-4 mb-2 text-sm">Client Feedback Review</p>
-                                                  <p className="text-xs text-secondary-light mb-0">Lead by <a
+                                                  <p className="text-xs text-secondary-light mb-0">Lead by <Link
                                                           href="javascript:void(0)"
-                                                          className="text-primary-600 hover-underline">John</a></p>
+                                                          className="text-primary-600 hover-underline">John</Link></p>
                                               </div>
                                               <div>
-                                                  <a href="javascript:void(0)"
-                                                      className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</a>
+                                                  <Link href="javascript:void(0)"
+                                                      className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                                               </div>
                                           </div>
                                       </div>

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import Script from "next/script";
 const __inlineScripts = "let choosePlanInput = document.querySelector('.choose-plan-input');\r\n    let priceRanges = document.querySelectorAll('.price-range');\r\n\r\n    // Store original prices (once)\r\n    priceRanges.forEach(price => {\r\n        price.dataset.original = price.innerHTML.trim();\r\n    });\r\n\r\n    choosePlanInput.addEventListener('change', function () {\r\n\r\n        if (this.checked) {\r\n            // When checked → Multiply by 10\r\n            priceRanges.forEach(price => {\r\n                let cleanValue = price.dataset.original.replace(/[^0-9.]/g, '').trim();\r\n                let multiplied = Number(cleanValue) * 10;\r\n                price.innerHTML = multiplied;\r\n            });\r\n\r\n        } else {\r\n            // When unchecked → Restore original values\r\n            priceRanges.forEach(price => {\r\n                price.innerHTML = price.dataset.original;\r\n            });\r\n        }\r\n    });";
 
@@ -9,7 +10,7 @@ export default function SubscriptionPlanPage() {
                   <div className="">
                       <h1 className="fw-semibold mb-4 h6 text-primary-light">Subscription Plan </h1>
                       <div className="">
-                          <a href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </a>
+                          <Link href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </Link>
                           <span className="text-secondary-light">/ Subscription Plan</span>
                       </div>
                   </div>

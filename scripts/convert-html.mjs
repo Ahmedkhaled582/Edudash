@@ -134,8 +134,16 @@ function htmlToTsx(html) {
     s = s.replace(re, `<${tag}$1 />`);
   }
 
+  s = s.replace(/<a(\s)/gi, "<Link$1");
+  s = s.replace(/<a>/gi, "<Link>");
+  s = s.replace(/<\/a>/gi, "</Link>");
+
   s = s.replace(/->/g, "\u2192");
   return s;
+}
+
+function linkImportIfNeeded(processedHtml) {
+  return processedHtml.includes("<Link") ? 'import Link from "next/link";\n\n' : "";
 }
 
 /** @param {string} html */
@@ -194,9 +202,10 @@ function write(p, content) {
 }
 
 function componentWrap(name, inner) {
+  const linkImport = linkImportIfNeeded(inner);
   return `/* eslint-disable @next/next/no-img-element */
 /* Auto-generated from static HTML — preserve class names for theme/CSS */
-export default function ${name}() {
+${linkImport}export default function ${name}() {
   return (
     <>
 ${inner.split("\n").map((l) => "      " + l).join("\n")}
@@ -369,7 +378,8 @@ const __inline = ${JSON.stringify(safeScripts)};
       />`
           : "";
 
-      const page = `${scriptPart}import ThemeCustomization from "@/components/ThemeCustomization";
+      const page = `${scriptPart}import Link from "next/link";
+import ThemeCustomization from "@/components/ThemeCustomization";
 import MobileOverlay from "@/components/MobileOverlay";
 
 export default function ${base === "login" ? "Login" : "Register"}Page() {
@@ -425,6 +435,7 @@ ${scriptEl}
         .join("") + "Page";
 
     const pageContent = `/* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 ${scriptImport}${scriptConst}export default function ${compName}() {
   return (
     <>

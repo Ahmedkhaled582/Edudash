@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ThemeCustomization from "@/components/ThemeCustomization";
 import MobileOverlay from "@/components/MobileOverlay";
 
@@ -12,9 +13,9 @@ export default function LoginPage() {
           </div>
           <div className="lg-w-50 px-24 py-32 d-flex justify-content-center align-items-center">
               <div className="max-w-540-px mx-auto">
-                  <a href="/" className="">
+                  <Link href="/" className="">
                       <img src="/assets/images/logo.png" alt="Logo" />
-                  </a>
+                  </Link>
                   <div className="mt-32 mb-32">
                       <h1 className="h6 fw-bold text-primary-light mb-8">
                           Welcome Back 👋
@@ -53,8 +54,8 @@ export default function LoginPage() {
                               <input className="form-check-input border border-neutral-400" type="checkbox" value="" id="remeber" />
                               <label className="form-check-label" htmlFor="remeber">Remember me </label>
                           </div>
-                          <a href="javascript:void(0)" className="text-primary-600 fw-medium text-decoration-underline">Forgot
-                              Password?</a>
+                          <Link href="javascript:void(0)" className="text-primary-600 fw-medium text-decoration-underline">Forgot
+                              Password?</Link>
                       </div>
                       <div className="">
                           <button type="submit" className="loginBtn btn btn-primary-600 text-sm btn-sm px-12 py-16 w-100 radius-8"> Log In
@@ -64,55 +65,55 @@ export default function LoginPage() {
                           or login as
                       </div>
                       <div className="d-grid sm-grid-cols-3 grid-cols-2 gap-16">
-                          <a href="javascript:void(0)"
+                          <Link href="javascript:void(0)"
                               className="d-flex align-items-center gap-8 fw-semibold text-sm radius-6 justify-content-center flex-grow-1 bg-success text-white py-10 px-8">
                               <span className="d-flex">
                                   <img src="/assets/images/icons/sheild-icon.png" alt="Icon" />
                               </span>
                               <span className="">Supper Admin</span>
-                          </a>
-                          <a href="javascript:void(0)"
+                          </Link>
+                          <Link href="javascript:void(0)"
                               className="d-flex align-items-center gap-8 fw-semibold text-sm radius-6 justify-content-center flex-grow-1 bg-info-600 text-white py-10 px-8">
                               <span className="d-flex">
                                   <img src="/assets/images/icons/dashboard-icon.png" alt="Icon" />
                               </span>
                               <span className="">Admin</span>
-                          </a>
-                          <a href="javascript:void(0)"
+                          </Link>
+                          <Link href="javascript:void(0)"
                               className="d-flex align-items-center gap-8 fw-semibold text-sm radius-6 justify-content-center flex-grow-1 bg-warning-600 text-white py-10 px-8">
                               <span className="d-flex">
                                   <img src="/assets/images/icons/student-icon.png" alt="Icon" />
                               </span>
                               <span className="">Student</span>
-                          </a>
-                          <a href="javascript:void(0)"
+                          </Link>
+                          <Link href="javascript:void(0)"
                               className="d-flex align-items-center gap-8 fw-semibold text-sm radius-6 justify-content-center flex-grow-1 bg-purple-600 text-white py-10 px-8">
                               <span className="d-flex">
                                   <img src="/assets/images/icons/teacher-icon.png" alt="Icon" />
                               </span>
                               <span className="">Teacher</span>
-                          </a>
-                          <a href="javascript:void(0)"
+                          </Link>
+                          <Link href="javascript:void(0)"
                               className="d-flex align-items-center gap-8 fw-semibold text-sm radius-6 justify-content-center flex-grow-1 bg-primary-600 text-white py-10 px-8">
                               <span className="d-flex">
                                   <img src="/assets/images/icons/guardian-icon.png" alt="Icon" />
                               </span>
                               <span className="">Guardians </span>
-                          </a>
-                          <a href="javascript:void(0)"
+                          </Link>
+                          <Link href="javascript:void(0)"
                               className="d-flex align-items-center gap-8 fw-semibold text-sm radius-6 justify-content-center flex-grow-1 bg-pink text-white py-10 px-8">
                               <span className="d-flex">
                                   <img src="/assets/images/icons/library-icon.png" alt="Icon" />
                               </span>
                               <span className="">Librarian</span>
-                          </a>
+                          </Link>
                       </div>
                   </form>
                   <div className="mt-32 text-center text-sm">
                       Don't have an account?
-                      <a href="/register" className="text-primary-600 fw-semibold text-decoration-underline">
+                      <Link href="/register" className="text-primary-600 fw-semibold text-decoration-underline">
                           Create an account
-                      </a>
+                      </Link>
                   </div>
               </div>
           </div>

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 export default function AddNewStudentPage() {
   return (
     <>
@@ -6,18 +7,18 @@ export default function AddNewStudentPage() {
         <div className="">
           <h1 className="fw-semibold mb-4 h6 text-primary-light">Add New Student</h1>
           <div className="">
-            <a href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </a>
-            <a href="/student-list" className="text-secondary-light hover-text-primary hover-underline "> /
-              Student</a>
+            <Link href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </Link>
+            <Link href="/student-list" className="text-secondary-light hover-text-primary hover-underline "> /
+              Student</Link>
             <span className="text-secondary-light">/ Add New Student</span>
           </div>
         </div>
-        <a href="/add-new-student" className="btn btn-primary-600 d-flex align-items-center gap-6 d-none">
+        <Link href="/add-new-student" className="btn btn-primary-600 d-flex align-items-center gap-6 d-none">
           <span className="d-flex text-md">
             <i className="ri-add-large-line"></i>
           </span>
           Add Student
-        </a>
+        </Link>
       </div>
       
               <form action="#" className="mt-24">

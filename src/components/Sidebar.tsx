@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* Auto-generated from static HTML — preserve class names for theme/CSS */
+import Link from "next/link";
 export default function Sidebar() {
   return (
     <>
@@ -9,11 +10,11 @@ export default function Sidebar() {
         </button>
         <div className="">
           <div className="sidebar-logo d-flex align-items-center justify-content-between">
-            <a href="/" className="">
+            <Link href="/" className="">
               <img src="/assets/images/logo.png" alt="site logo" className="light-logo" />
               <img src="/assets/images/logo-light.png" alt="site logo" className="dark-logo" />
               <img src="/assets/images/logo-icon.png" alt="site logo" className="logo-icon" />
-            </a>
+            </Link>
             <button type="button" className="text-xxl d-xl-flex d-none line-height-1 sidebar-toggle text-neutral-500"
               aria-label="Collapse Sidebar">
               <i className="ri-contract-left-line"></i>
@@ -40,25 +41,25 @@ export default function Sidebar() {
             </button>
             <ul className="dropdown-menu dropdown-menu-lg-end border p-12">
               <li>
-                <a href="/student-details" 
+                <Link href="/student-details" 
                   className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                   <i className="ri-user-3-line"></i>
                   My Profile
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/general"
+                <Link href="/general"
                   className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                   <i className="ri-settings-3-line"></i>
                   Setting
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/login"
+                <Link href="/login"
                   className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                   <i className="ri-shut-down-line"></i>
                   Log Out
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -67,498 +68,498 @@ export default function Sidebar() {
         <div className="sidebar-menu-area">
           <ul className="sidebar-menu" id="sidebar-menu">
             <li className="dropdown">
-              <a href="javascript:void(0)">
+              <Link href="javascript:void(0)">
                 <i className="ri-home-4-line"></i>
                 <span>Dashboard </span>
-              </a>
+              </Link>
               <ul className="sidebar-submenu">
                 <li>
-                  <a href="/">
+                  <Link href="/">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     School
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/index-2">
+                  <Link href="/index-2">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Student
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/index-3">
+                  <Link href="/index-3">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Teacher
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/index-4">
+                  <Link href="/index-4">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Parent
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/index-5">
+                  <Link href="/index-5">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     LMS 
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/index-6">
+                  <Link href="/index-6">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     University 
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="dropdown">
-              <a href="javascript:void(0)">
+              <Link href="javascript:void(0)">
                 <i className="ri-graduation-cap-line"></i>
                 <span>Students</span>
-              </a>
+              </Link>
               <ul className="sidebar-submenu">
                 <li>
-                  <a href="/add-new-student">
+                  <Link href="/add-new-student">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Add New Student
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/student-list">
+                  <Link href="/student-list">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Student List
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/suspended-student">
+                  <Link href="/suspended-student">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Suspend Student
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/student-category">
+                  <Link href="/student-category">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Student Categories
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/edit-student">
+                  <Link href="/edit-student">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Edit Student
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/student-details">
+                  <Link href="/student-details">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Student Details
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="dropdown">
-              <a href="javascript:void(0)">
+              <Link href="javascript:void(0)">
                 <i className="ri-user-follow-line"></i>
                 <span>Teachers</span>
-              </a>
+              </Link>
               <ul className="sidebar-submenu">
                 <li>
-                  <a href="/add-new-teacher">
+                  <Link href="/add-new-teacher">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Add New Teacher
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/teacher-list">
+                  <Link href="/teacher-list">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Teacher List
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/edit-teacher">
+                  <Link href="/edit-teacher">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Edit Teacher
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/teacher-details">
+                  <Link href="/teacher-details">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Teacher Details
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/teacher-timetable">
+                  <Link href="/teacher-timetable">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Teacher Timetable
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="dropdown">
-              <a href="javascript:void(0)">
+              <Link href="javascript:void(0)">
                 <i className="ri-account-circle-line"></i>
                 <span>Guardian</span>
-              </a>
+              </Link>
               <ul className="sidebar-submenu">
                 <li>
-                  <a href="/add-new-guardian">
+                  <Link href="/add-new-guardian">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Add New Guardians
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/guardian-list">
+                  <Link href="/guardian-list">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Guardians List
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/edit-guardian">
+                  <Link href="/edit-guardian">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Edit Guardian
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/guardian-details">
+                  <Link href="/guardian-details">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Guardian Details
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="dropdown">
-              <a href="javascript:void(0)">
+              <Link href="javascript:void(0)">
                 <i className="ri-list-view"></i>
                 <span>Classes</span>
-              </a>
+              </Link>
               <ul className="sidebar-submenu">
                 <li>
-                  <a href="/section-list">
+                  <Link href="/section-list">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Section
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/subject-list">
+                  <Link href="/subject-list">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Subjects
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/class-list">
+                  <Link href="/class-list">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Class List
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/class-room-list">
+                  <Link href="/class-room-list">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Class Room
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="dropdown">
-              <a href="javascript:void(0)">
+              <Link href="javascript:void(0)">
                 <i className="ri-file-edit-line"></i>
                 <span>Examinations</span>
-              </a>
+              </Link>
               <ul className="sidebar-submenu">
                 <li>
-                  <a href="/exam">
+                  <Link href="/exam">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Exam
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/exam-schedule">
+                  <Link href="/exam-schedule">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Exam Schedule
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/exam-result">
+                  <Link href="/exam-result">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Exam Result
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="dropdown">
-              <a href="javascript:void(0)">
+              <Link href="javascript:void(0)">
                 <i className="ri-money-dollar-circle-line"></i>
                 <span>Fees Collection</span>
-              </a>
+              </Link>
               <ul className="sidebar-submenu">
                 <li>
-                  <a href="/fees-collect">
+                  <Link href="/fees-collect">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Fees Collect
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/fees-type">
+                  <Link href="/fees-type">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Fees Type
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/fees-group">
+                  <Link href="/fees-group">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Fees Group
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/fees-discount">
+                  <Link href="/fees-discount">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Fees Discount
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="dropdown">
-              <a href="javascript:void(0)">
+              <Link href="javascript:void(0)">
                 <i className="ri-calendar-check-line"></i>
                 <span>Attendance</span>
-              </a>
+              </Link>
               <ul className="sidebar-submenu">
                 <li>
-                  <a href="/student-attendance">
+                  <Link href="/student-attendance">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Student Attendance
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/teacher-attendance">
+                  <Link href="/teacher-attendance">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Teacher Attendance
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/employee-attendance">
+                  <Link href="/employee-attendance">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Employee Attendance
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="dropdown">
-              <a href="javascript:void(0)">
+              <Link href="javascript:void(0)">
                 <i className="ri-time-line"></i>
                 <span>Leaves</span>
-              </a>
+              </Link>
               <ul className="sidebar-submenu">
                 <li>
-                  <a href="/leave-types">
+                  <Link href="/leave-types">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Leave Types
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/leave-request">
+                  <Link href="/leave-request">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Leave Request
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="/certificate">
+              <Link href="/certificate">
                 <i className="ri-home-4-line"></i>
                 <span>Certificate </span>
-              </a>
+              </Link>
             </li>
             <li className="dropdown">
-              <a href="javascript:void(0)">
+              <Link href="javascript:void(0)">
                 <i className="ri-book-2-line"></i>
                 <span>Library</span>
-              </a>
+              </Link>
               <ul className="sidebar-submenu">
                 <li>
-                  <a href="/books-list">
+                  <Link href="/books-list">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Books List
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/members-list">
+                  <Link href="/members-list">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Members List
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/member-details">
+                  <Link href="/member-details">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Members Details
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/issue-return">
+                  <Link href="/issue-return">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Issue Return
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="dropdown">
-              <a href="javascript:void(0)">
+              <Link href="javascript:void(0)">
                 <i className="ri-money-dollar-circle-line"></i>
                 <span>Accounts</span>
-              </a>
+              </Link>
               <ul className="sidebar-submenu">
                 <li>
-                  <a href="/income-head">
+                  <Link href="/income-head">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Income Head
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/income-list">
+                  <Link href="/income-list">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Income List
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/expense-head">
+                  <Link href="/expense-head">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Expense Head
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/expense-list">
+                  <Link href="/expense-list">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Expense List
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/transaction">
+                  <Link href="/transaction">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Transaction
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="dropdown">
-              <a href="javascript:void(0)">
+              <Link href="javascript:void(0)">
                 <i className="ri-user-settings-line"></i>
                 <span>HRM</span>
-              </a>
+              </Link>
               <ul className="sidebar-submenu">
                 <li>
-                  <a href="/employee-list">
+                  <Link href="/employee-list">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Employee List
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/employee-details">
+                  <Link href="/employee-details">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Employee Details
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/add-new-employee">
+                  <Link href="/add-new-employee">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Add New Employee
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/payroll">
+                  <Link href="/payroll">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Payroll
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/designation">
+                  <Link href="/designation">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Designation
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/department">
+                  <Link href="/department">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Department
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="/notice-board">
+              <Link href="/notice-board">
                 <i className="ri-booklet-line"></i>
                 <span>Notice Board </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/event">
+              <Link href="/event">
                 <i className="ri-calendar-event-line"></i>
                 <span>Event </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/message">
+              <Link href="/message">
                 <i className="ri-message-2-line"></i>
                 <span>Message </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/subscription-plan">
+              <Link href="/subscription-plan">
                 <i className="ri-price-tag-3-line"></i>
                 <span>Subscription Plan </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/role-access">
+              <Link href="/role-access">
                 <i className="ri-macbook-line"></i>
                 <span>Role & Access</span>
-              </a>
+              </Link>
             </li>
                <li className="dropdown">
-              <a href="javascript:void(0)">
+              <Link href="javascript:void(0)">
                 <i className="ri-shield-check-line"></i>
                 <span>Authentication</span>
-              </a>
+              </Link>
               <ul className="sidebar-submenu">
                 <li>
-                  <a href="/login"><i className="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Login</a>
+                  <Link href="/login"><i className="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Login</Link>
                 </li>
                 <li>
-                  <a href="/register"><i className="ri-circle-fill circle-icon text-warning-main w-auto"></i> Register</a>
+                  <Link href="/register"><i className="ri-circle-fill circle-icon text-warning-main w-auto"></i> Register</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="/assign-role-plan">
+              <Link href="/assign-role-plan">
                 <i className="ri-user-follow-line"></i>
                 <span>Assign Role</span>
-              </a>
+              </Link>
             </li>
             <li className="dropdown">
-              <a href="javascript:void(0)">
+              <Link href="javascript:void(0)">
                 <i className="ri-user-settings-line"></i>
                 <span>Settings</span>
-              </a>
+              </Link>
               <ul className="sidebar-submenu">
                 <li>
-                  <a href="/general">
+                  <Link href="/general">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     General
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/notification">
+                  <Link href="/notification">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Notification
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/currencies">
+                  <Link href="/currencies">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Currencies
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/languages">
+                  <Link href="/languages">
                     <i className="ri-circle-fill circle-icon w-auto"></i>
                     Languages
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>

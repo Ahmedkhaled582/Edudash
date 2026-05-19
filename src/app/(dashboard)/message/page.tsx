@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 export default function MessagePage() {
   return (
     <>
@@ -6,7 +7,7 @@ export default function MessagePage() {
                   <div className="">
                       <h1 className="fw-semibold mb-4 h6 text-primary-light">Message </h1>
                       <div className="">
-                          <a href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </a>
+                          <Link href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </Link>
                           <span className="text-secondary-light">/ Message</span>
                       </div>
                   </div>
