@@ -524,7 +524,7 @@ export default function AddNewTeacherPage() {
       <Script
         id="page-add-new-teacher-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

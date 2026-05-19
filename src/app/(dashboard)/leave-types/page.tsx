@@ -709,7 +709,7 @@ export default function LeaveTypesPage() {
       <Script
         id="page-leave-types-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

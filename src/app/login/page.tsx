@@ -54,7 +54,7 @@ export default function LoginPage() {
                               <input className="form-check-input border border-neutral-400" type="checkbox" value="" id="remeber" />
                               <label className="form-check-label" htmlFor="remeber">Remember me </label>
                           </div>
-                          <Link href="javascript:void(0)" className="text-primary-600 fw-medium text-decoration-underline">Forgot
+                          <Link href="#" className="text-primary-600 fw-medium text-decoration-underline">Forgot
                               Password?</Link>
                       </div>
                       <div className="">
@@ -65,42 +65,42 @@ export default function LoginPage() {
                           or login as
                       </div>
                       <div className="d-grid sm-grid-cols-3 grid-cols-2 gap-16">
-                          <Link href="javascript:void(0)"
+                          <Link href="#"
                               className="d-flex align-items-center gap-8 fw-semibold text-sm radius-6 justify-content-center flex-grow-1 bg-success text-white py-10 px-8">
                               <span className="d-flex">
                                   <img src="/assets/images/icons/sheild-icon.png" alt="Icon" />
                               </span>
                               <span className="">Supper Admin</span>
                           </Link>
-                          <Link href="javascript:void(0)"
+                          <Link href="#"
                               className="d-flex align-items-center gap-8 fw-semibold text-sm radius-6 justify-content-center flex-grow-1 bg-info-600 text-white py-10 px-8">
                               <span className="d-flex">
                                   <img src="/assets/images/icons/dashboard-icon.png" alt="Icon" />
                               </span>
                               <span className="">Admin</span>
                           </Link>
-                          <Link href="javascript:void(0)"
+                          <Link href="#"
                               className="d-flex align-items-center gap-8 fw-semibold text-sm radius-6 justify-content-center flex-grow-1 bg-warning-600 text-white py-10 px-8">
                               <span className="d-flex">
                                   <img src="/assets/images/icons/student-icon.png" alt="Icon" />
                               </span>
                               <span className="">Student</span>
                           </Link>
-                          <Link href="javascript:void(0)"
+                          <Link href="#"
                               className="d-flex align-items-center gap-8 fw-semibold text-sm radius-6 justify-content-center flex-grow-1 bg-purple-600 text-white py-10 px-8">
                               <span className="d-flex">
                                   <img src="/assets/images/icons/teacher-icon.png" alt="Icon" />
                               </span>
                               <span className="">Teacher</span>
                           </Link>
-                          <Link href="javascript:void(0)"
+                          <Link href="#"
                               className="d-flex align-items-center gap-8 fw-semibold text-sm radius-6 justify-content-center flex-grow-1 bg-primary-600 text-white py-10 px-8">
                               <span className="d-flex">
                                   <img src="/assets/images/icons/guardian-icon.png" alt="Icon" />
                               </span>
                               <span className="">Guardians </span>
                           </Link>
-                          <Link href="javascript:void(0)"
+                          <Link href="#"
                               className="d-flex align-items-center gap-8 fw-semibold text-sm radius-6 justify-content-center flex-grow-1 bg-pink text-white py-10 px-8">
                               <span className="d-flex">
                                   <img src="/assets/images/icons/library-icon.png" alt="Icon" />

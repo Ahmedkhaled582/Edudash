@@ -735,11 +735,11 @@ export default function Index4Page() {
                                                               Kickoff
                                                           </p>
                                                           <p className="text-xs text-secondary-light mb-0">Lead by <Link
-                                                                  href="javascript:void(0)"
+                                                                  href="#"
                                                                   className="text-primary-600 hover-underline">Robert Fox</Link></p>
                                                       </div>
                                                       <div>
-                                                          <Link href="javascript:void(0)"
+                                                          <Link href="#"
                                                               className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                                                       </div>
                                                   </div>
@@ -754,13 +754,13 @@ export default function Index4Page() {
                                                               Brainstorm
                                                           </p>
                                                           <p className="text-xs text-secondary-light mb-0">Lead by <Link
-                                                                  href="javascript:void(0)"
+                                                                  href="#"
                                                                   className="text-primary-600 hover-underline">Leslie
                                                                   Alexander</Link>
                                                           </p>
                                                       </div>
                                                       <div>
-                                                          <Link href="javascript:void(0)"
+                                                          <Link href="#"
                                                               className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                                                       </div>
                                                   </div>
@@ -775,12 +775,12 @@ export default function Index4Page() {
                                                               Review
                                                           </p>
                                                           <p className="text-xs text-secondary-light mb-0">Lead by <Link
-                                                                  href="javascript:void(0)"
+                                                                  href="#"
                                                                   className="text-primary-600 hover-underline">Courtney Henry</Link>
                                                           </p>
                                                       </div>
                                                       <div>
-                                                          <Link href="javascript:void(0)"
+                                                          <Link href="#"
                                                               className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                                                       </div>
                                                   </div>
@@ -796,12 +796,12 @@ export default function Index4Page() {
                                                               Task
                                                               Allocation</p>
                                                           <p className="text-xs text-secondary-light mb-0">Lead by <Link
-                                                                  href="javascript:void(0)"
+                                                                  href="#"
                                                                   className="text-primary-600 hover-underline">Eleanor Pena</Link>
                                                           </p>
                                                       </div>
                                                       <div>
-                                                          <Link href="javascript:void(0)"
+                                                          <Link href="#"
                                                               className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                                                       </div>
                                                   </div>
@@ -816,11 +816,11 @@ export default function Index4Page() {
                                                               Review
                                                           </p>
                                                           <p className="text-xs text-secondary-light mb-0">Lead by <Link
-                                                                  href="javascript:void(0)"
+                                                                  href="#"
                                                                   className="text-primary-600 hover-underline">John</Link></p>
                                                       </div>
                                                       <div>
-                                                          <Link href="javascript:void(0)"
+                                                          <Link href="#"
                                                               className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                                                       </div>
                                                   </div>
@@ -839,7 +839,7 @@ export default function Index4Page() {
       <Script
         id="page-index-4-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

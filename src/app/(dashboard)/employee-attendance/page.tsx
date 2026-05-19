@@ -11,7 +11,7 @@ export default function EmployeeAttendancePage() {
           <h1 className="fw-semibold mb-4 h6 text-primary-light">Employee Attendance</h1>
           <div className="">
             <Link href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </Link>
-            <Link href="javascript:void(0)" className="text-secondary-light hover-text-primary hover-underline d-none"> /
+            <Link href="#" className="text-secondary-light hover-text-primary hover-underline d-none"> /
               Employee Attendance</Link>
             <span className="text-secondary-light">/ Employee Attendance</span>
           </div>
@@ -635,7 +635,7 @@ export default function EmployeeAttendancePage() {
       <Script
         id="page-employee-attendance-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

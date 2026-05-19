@@ -587,7 +587,7 @@ export default function DepartmentPage() {
       <Script
         id="page-department-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

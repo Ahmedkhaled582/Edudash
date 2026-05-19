@@ -256,15 +256,15 @@ export default function Index5Page() {
                                                   </div>
                                               </div>
                                               <div className="mt-16 d-flex gap-12">
-                                                  <Link href="javascript:void(0)"
+                                                  <Link href="#"
                                                       className="btn btn-primary-600 d-flex align-items-center gap-6 px-16 flex-grow-1 justify-content-center">
                                                       Join Class
                                                   </Link>
-                                                  <Link href="javascript:void(0)"
+                                                  <Link href="#"
                                                       className="btn btn-primary-100 d-flex align-items-center justify-content-center gap-6 p-0 w-44-px h-44-px text-primary-600 text-xl">
                                                       <i className="ri-chat-1-line"></i>
                                                   </Link>
-                                                  <Link href="javascript:void(0)"
+                                                  <Link href="#"
                                                       className="btn btn-warning-100 d-flex align-items-center gap-6 px-16 text-warning-600 flex-grow-1 justify-content-center">
                                                       <i className="ri-time-line"></i>
                                                       Join Class
@@ -298,15 +298,15 @@ export default function Index5Page() {
                                                   </div>
                                               </div>
                                               <div className="mt-16 d-flex gap-12">
-                                                  <Link href="javascript:void(0)"
+                                                  <Link href="#"
                                                       className="btn btn-primary-600 d-flex align-items-center gap-6 px-16 flex-grow-1 justify-content-center">
                                                       Join Class
                                                   </Link>
-                                                  <Link href="javascript:void(0)"
+                                                  <Link href="#"
                                                       className="btn btn-primary-100 d-flex align-items-center justify-content-center gap-6 p-0 w-44-px h-44-px text-primary-600 text-xl">
                                                       <i className="ri-chat-1-line"></i>
                                                   </Link>
-                                                  <Link href="javascript:void(0)"
+                                                  <Link href="#"
                                                       className="btn btn-warning-100 d-flex align-items-center gap-6 px-16 text-warning-600 flex-grow-1 justify-content-center">
                                                       <i className="ri-time-line"></i>
                                                       Join Class
@@ -340,15 +340,15 @@ export default function Index5Page() {
                                                   </div>
                                               </div>
                                               <div className="mt-16 d-flex gap-12">
-                                                  <Link href="javascript:void(0)"
+                                                  <Link href="#"
                                                       className="btn btn-primary-600 d-flex align-items-center gap-6 px-16 flex-grow-1 justify-content-center">
                                                       Join Class
                                                   </Link>
-                                                  <Link href="javascript:void(0)"
+                                                  <Link href="#"
                                                       className="btn btn-primary-100 d-flex align-items-center justify-content-center gap-6 p-0 w-44-px h-44-px text-primary-600 text-xl">
                                                       <i className="ri-chat-1-line"></i>
                                                   </Link>
-                                                  <Link href="javascript:void(0)"
+                                                  <Link href="#"
                                                       className="btn btn-warning-100 d-flex align-items-center gap-6 px-16 text-warning-600 flex-grow-1 justify-content-center">
                                                       <i className="ri-time-line"></i>
                                                       Join Class
@@ -382,15 +382,15 @@ export default function Index5Page() {
                                                   </div>
                                               </div>
                                               <div className="mt-16 d-flex gap-12">
-                                                  <Link href="javascript:void(0)"
+                                                  <Link href="#"
                                                       className="btn btn-primary-600 d-flex align-items-center gap-6 px-16 flex-grow-1 justify-content-center">
                                                       Join Class
                                                   </Link>
-                                                  <Link href="javascript:void(0)"
+                                                  <Link href="#"
                                                       className="btn btn-primary-100 d-flex align-items-center justify-content-center gap-6 p-0 w-44-px h-44-px text-primary-600 text-xl">
                                                       <i className="ri-chat-1-line"></i>
                                                   </Link>
-                                                  <Link href="javascript:void(0)"
+                                                  <Link href="#"
                                                       className="btn btn-warning-100 d-flex align-items-center gap-6 px-16 text-warning-600 flex-grow-1 justify-content-center">
                                                       <i className="ri-time-line"></i>
                                                       Join Class
@@ -992,7 +992,7 @@ export default function Index5Page() {
       <Script
         id="page-index-5-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

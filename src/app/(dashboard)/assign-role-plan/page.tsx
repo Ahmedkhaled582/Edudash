@@ -606,7 +606,7 @@ export default function AssignRolePlanPage() {
       <Script
         id="page-assign-role-plan-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

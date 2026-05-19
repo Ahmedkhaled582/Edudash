@@ -200,7 +200,7 @@ export default function GuardianDetailsPage() {
       <Script
         id="page-guardian-details-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

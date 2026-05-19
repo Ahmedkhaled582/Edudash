@@ -68,7 +68,7 @@ export default function Sidebar() {
         <div className="sidebar-menu-area">
           <ul className="sidebar-menu" id="sidebar-menu">
             <li className="dropdown">
-              <Link href="javascript:void(0)">
+              <Link href="#">
                 <i className="ri-home-4-line"></i>
                 <span>Dashboard </span>
               </Link>
@@ -112,7 +112,7 @@ export default function Sidebar() {
               </ul>
             </li>
             <li className="dropdown">
-              <Link href="javascript:void(0)">
+              <Link href="#">
                 <i className="ri-graduation-cap-line"></i>
                 <span>Students</span>
               </Link>
@@ -156,7 +156,7 @@ export default function Sidebar() {
               </ul>
             </li>
             <li className="dropdown">
-              <Link href="javascript:void(0)">
+              <Link href="#">
                 <i className="ri-user-follow-line"></i>
                 <span>Teachers</span>
               </Link>
@@ -194,7 +194,7 @@ export default function Sidebar() {
               </ul>
             </li>
             <li className="dropdown">
-              <Link href="javascript:void(0)">
+              <Link href="#">
                 <i className="ri-account-circle-line"></i>
                 <span>Guardian</span>
               </Link>
@@ -226,7 +226,7 @@ export default function Sidebar() {
               </ul>
             </li>
             <li className="dropdown">
-              <Link href="javascript:void(0)">
+              <Link href="#">
                 <i className="ri-list-view"></i>
                 <span>Classes</span>
               </Link>
@@ -258,7 +258,7 @@ export default function Sidebar() {
               </ul>
             </li>
             <li className="dropdown">
-              <Link href="javascript:void(0)">
+              <Link href="#">
                 <i className="ri-file-edit-line"></i>
                 <span>Examinations</span>
               </Link>
@@ -284,7 +284,7 @@ export default function Sidebar() {
               </ul>
             </li>
             <li className="dropdown">
-              <Link href="javascript:void(0)">
+              <Link href="#">
                 <i className="ri-money-dollar-circle-line"></i>
                 <span>Fees Collection</span>
               </Link>
@@ -316,7 +316,7 @@ export default function Sidebar() {
               </ul>
             </li>
             <li className="dropdown">
-              <Link href="javascript:void(0)">
+              <Link href="#">
                 <i className="ri-calendar-check-line"></i>
                 <span>Attendance</span>
               </Link>
@@ -342,7 +342,7 @@ export default function Sidebar() {
               </ul>
             </li>
             <li className="dropdown">
-              <Link href="javascript:void(0)">
+              <Link href="#">
                 <i className="ri-time-line"></i>
                 <span>Leaves</span>
               </Link>
@@ -368,7 +368,7 @@ export default function Sidebar() {
               </Link>
             </li>
             <li className="dropdown">
-              <Link href="javascript:void(0)">
+              <Link href="#">
                 <i className="ri-book-2-line"></i>
                 <span>Library</span>
               </Link>
@@ -400,7 +400,7 @@ export default function Sidebar() {
               </ul>
             </li>
             <li className="dropdown">
-              <Link href="javascript:void(0)">
+              <Link href="#">
                 <i className="ri-money-dollar-circle-line"></i>
                 <span>Accounts</span>
               </Link>
@@ -438,7 +438,7 @@ export default function Sidebar() {
               </ul>
             </li>
             <li className="dropdown">
-              <Link href="javascript:void(0)">
+              <Link href="#">
                 <i className="ri-user-settings-line"></i>
                 <span>HRM</span>
               </Link>
@@ -512,7 +512,7 @@ export default function Sidebar() {
               </Link>
             </li>
                <li className="dropdown">
-              <Link href="javascript:void(0)">
+              <Link href="#">
                 <i className="ri-shield-check-line"></i>
                 <span>Authentication</span>
               </Link>
@@ -532,7 +532,7 @@ export default function Sidebar() {
               </Link>
             </li>
             <li className="dropdown">
-              <Link href="javascript:void(0)">
+              <Link href="#">
                 <i className="ri-user-settings-line"></i>
                 <span>Settings</span>
               </Link>

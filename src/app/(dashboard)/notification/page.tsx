@@ -16,7 +16,7 @@ export default function NotificationPage() {
             <span className="text-secondary-light">/ Notification</span>
           </div>
         </div>
-        <Link href="javascript:void(0)" className="btn btn-primary-600 d-flex align-items-center gap-6 d-none">
+        <Link href="#" className="btn btn-primary-600 d-flex align-items-center gap-6 d-none">
           <span className="d-flex text-md">
             <i className="ri-add-large-line"></i>
           </span>
@@ -130,7 +130,7 @@ export default function NotificationPage() {
       <Script
         id="page-notification-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

@@ -490,11 +490,11 @@ export default function IndexPage() {
                                   <span className="text-xs text-secondary-light line-height-1 mb-2">AM</span>
                                 </div>
                                 <p className="text-secondary-light mt-4 mb-2 text-sm">Marketing Strategy Kickoff</p>
-                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="javascript:void(0)"
+                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="#"
                                     className="text-primary-600 hover-underline">Robert Fox</Link></p>
                               </div>
                               <div>
-                                <Link href="javascript:void(0)"
+                                <Link href="#"
                                   className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                               </div>
                             </div>
@@ -505,11 +505,11 @@ export default function IndexPage() {
                                   <span className="text-xs text-secondary-light line-height-1 mb-2">AM</span>
                                 </div>
                                 <p className="text-secondary-light mt-4 mb-2 text-sm">Product Design Brainstorm</p>
-                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="javascript:void(0)"
+                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="#"
                                     className="text-primary-600 hover-underline">Leslie Alexander</Link></p>
                               </div>
                               <div>
-                                <Link href="javascript:void(0)"
+                                <Link href="#"
                                   className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                               </div>
                             </div>
@@ -520,11 +520,11 @@ export default function IndexPage() {
                                   <span className="text-xs text-secondary-light line-height-1 mb-2">PM</span>
                                 </div>
                                 <p className="text-secondary-light mt-4 mb-2 text-sm">Client Feedback Review</p>
-                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="javascript:void(0)"
+                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="#"
                                     className="text-primary-600 hover-underline">Courtney Henry</Link></p>
                               </div>
                               <div>
-                                <Link href="javascript:void(0)"
+                                <Link href="#"
                                   className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                               </div>
                             </div>
@@ -535,11 +535,11 @@ export default function IndexPage() {
                                   <span className="text-xs text-secondary-light line-height-1 mb-2">PM</span>
                                 </div>
                                 <p className="text-secondary-light mt-4 mb-2 text-sm">Sprint Planning & Task Allocation</p>
-                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="javascript:void(0)"
+                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="#"
                                     className="text-primary-600 hover-underline">Eleanor Pena</Link></p>
                               </div>
                               <div>
-                                <Link href="javascript:void(0)"
+                                <Link href="#"
                                   className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                               </div>
                             </div>
@@ -550,11 +550,11 @@ export default function IndexPage() {
                                   <span className="text-xs text-secondary-light line-height-1 mb-2">PM</span>
                                 </div>
                                 <p className="text-secondary-light mt-4 mb-2 text-sm">Client Feedback Review</p>
-                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="javascript:void(0)"
+                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="#"
                                     className="text-primary-600 hover-underline">John</Link></p>
                               </div>
                               <div>
-                                <Link href="javascript:void(0)"
+                                <Link href="#"
                                   className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                               </div>
                             </div>
@@ -565,11 +565,11 @@ export default function IndexPage() {
                                   <span className="text-xs text-secondary-light line-height-1 mb-2">AM</span>
                                 </div>
                                 <p className="text-secondary-light mt-4 mb-2 text-sm">Product Design Brainstorm</p>
-                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="javascript:void(0)"
+                                <p className="text-xs text-secondary-light mb-0">Lead by <Link href="#"
                                     className="text-primary-600 hover-underline">Leslie Alexander</Link></p>
                               </div>
                               <div>
-                                <Link href="javascript:void(0)"
+                                <Link href="#"
                                   className="py-6 px-16 radius-4 bg-neutral-100 text-secondary-light fw-semibold bg-hover-primary-600 hover-text-white">View</Link>
                               </div>
                             </div>
@@ -1102,7 +1102,7 @@ export default function IndexPage() {
       <Script
         id="page-index-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

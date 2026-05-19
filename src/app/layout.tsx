@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import LegacyScripts from "@/components/LegacyScripts";
+import Script from "next/script";
 import "@/types/iconify";
 
 export const metadata: Metadata = {
@@ -22,10 +22,21 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="stylesheet" href="/assets/css/lib/full-calendar.css" />
         <link rel="stylesheet" href="/assets/css/lib/calendar.css" />
         <link rel="stylesheet" href="/assets/css/style.css" />
+        
+        {/* Core third-party scripts loaded before Next.js hydration */}
+        <Script src="/assets/js/lib/jquery-3.7.1.min.js" strategy="beforeInteractive" />
+        <Script src="/assets/js/lib/bootstrap.bundle.min.js" strategy="beforeInteractive" />
+        <Script src="/assets/js/lib/apexcharts.min.js" strategy="beforeInteractive" />
+        <Script src="/assets/js/lib/iconify-icon.min.js" strategy="beforeInteractive" />
+        <Script src="/assets/js/lib/dataTables.min.js" strategy="beforeInteractive" />
+        <Script src="/assets/js/lib/jquery-ui.min.js" strategy="beforeInteractive" />
+        <Script src="/assets/js/flatpickr.js" strategy="beforeInteractive" />
+        <Script src="/assets/js/full-calendar.js" strategy="beforeInteractive" />
       </head>
       <body suppressHydrationWarning>
         {children}
-        <LegacyScripts />
+        {/* Main app.js loaded after the DOM is ready */}
+        <Script src="/assets/js/app.js" strategy="afterInteractive" />
       </body>
     </html>
   );

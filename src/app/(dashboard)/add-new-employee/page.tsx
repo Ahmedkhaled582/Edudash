@@ -491,7 +491,7 @@ export default function AddNewEmployeePage() {
       <Script
         id="page-add-new-employee-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

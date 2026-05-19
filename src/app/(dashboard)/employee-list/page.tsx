@@ -130,7 +130,7 @@ export default function EmployeeListPage() {
                                       <select name="dataTable_length" aria-controls="dataTable"
                                           className="dt-input form-control form-select">
                                           <option value="5">5</option>
-                                          <option value="10" selected>10</option>
+                                          <option value="10">10</option>
                                           <option value="25">25</option>
                                           <option value="50">50</option>
                                           <option value="100">100</option>
@@ -206,7 +206,7 @@ export default function EmployeeListPage() {
                                                           </Link>
                                                       </li>
                                                       <li>
-                                                          <Link href="javascript:void(0)"
+                                                          <Link href="#"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i>
                                                               Edit
@@ -272,7 +272,7 @@ export default function EmployeeListPage() {
                                                           </Link>
                                                       </li>
                                                       <li>
-                                                          <Link href="javascript:void(0)"
+                                                          <Link href="#"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i>
                                                               Edit
@@ -331,7 +331,7 @@ export default function EmployeeListPage() {
                                                       <li><Link href="/student-list"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6"><i
                                                                   className="ri-user-3-line"></i>View Student</Link></li>
-                                                      <li><Link href="javascript:void(0)"
+                                                      <li><Link href="#"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6"><i
                                                                   className="ri-edit-2-line"></i>Edit</Link></li>
                                                       <li><button
@@ -381,7 +381,7 @@ export default function EmployeeListPage() {
                                                       <li><Link href="/student-list"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6"><i
                                                                   className="ri-user-3-line"></i>View Student</Link></li>
-                                                      <li><Link href="javascript:void(0)"
+                                                      <li><Link href="#"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6"><i
                                                                   className="ri-edit-2-line"></i>Edit</Link></li>
                                                       <li><button
@@ -431,7 +431,7 @@ export default function EmployeeListPage() {
                                                       <li><Link href="/student-list"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6"><i
                                                                   className="ri-user-3-line"></i>View Student</Link></li>
-                                                      <li><Link href="javascript:void(0)"
+                                                      <li><Link href="#"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6"><i
                                                                   className="ri-edit-2-line"></i>Edit</Link></li>
                                                       <li><button
@@ -486,7 +486,7 @@ export default function EmployeeListPage() {
                                                           </Link>
                                                       </li>
                                                       <li>
-                                                          <Link href="javascript:void(0)"
+                                                          <Link href="#"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i>
                                                               Edit
@@ -551,7 +551,7 @@ export default function EmployeeListPage() {
                                                           </Link>
                                                       </li>
                                                       <li>
-                                                          <Link href="javascript:void(0)"
+                                                          <Link href="#"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i>
                                                               Edit
@@ -616,7 +616,7 @@ export default function EmployeeListPage() {
                                                           </Link>
                                                       </li>
                                                       <li>
-                                                          <Link href="javascript:void(0)"
+                                                          <Link href="#"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i>
                                                               Edit
@@ -681,7 +681,7 @@ export default function EmployeeListPage() {
                                                           </Link>
                                                       </li>
                                                       <li>
-                                                          <Link href="javascript:void(0)"
+                                                          <Link href="#"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i>
                                                               Edit
@@ -746,7 +746,7 @@ export default function EmployeeListPage() {
                                                           </Link>
                                                       </li>
                                                       <li>
-                                                          <Link href="javascript:void(0)"
+                                                          <Link href="#"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i>
                                                               Edit
@@ -810,7 +810,7 @@ export default function EmployeeListPage() {
                                                           </Link>
                                                       </li>
                                                       <li>
-                                                          <Link href="javascript:void(0)"
+                                                          <Link href="#"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i> Edit
                                                           </Link>
@@ -873,7 +873,7 @@ export default function EmployeeListPage() {
                                                           </Link>
                                                       </li>
                                                       <li>
-                                                          <Link href="javascript:void(0)"
+                                                          <Link href="#"
                                                               className="dropdown-item rounded text-secondary-light bg-hover-neutral-200 text-hover-neutral-900 d-flex align-items-center gap-2 py-6">
                                                               <i className="ri-edit-2-line"></i> Edit
                                                           </Link>
@@ -930,7 +930,7 @@ export default function EmployeeListPage() {
       <Script
         id="page-employee-list-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

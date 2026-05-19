@@ -11,7 +11,7 @@ export default function StudentListPage() {
           <h1 className="fw-semibold mb-4 h6 text-primary-light">Student List</h1>
           <div className="">
             <Link href="/" className="text-secondary-light hover-text-primary hover-underline">Dashboard </Link>
-            <Link href="javascript:void(0)" className="text-secondary-light hover-text-primary hover-underline d-none"> /
+            <Link href="#" className="text-secondary-light hover-text-primary hover-underline d-none"> /
               Student</Link>
             <span className="text-secondary-light">/ Student List</span>
           </div>
@@ -147,7 +147,7 @@ export default function StudentListPage() {
                                       <select name="dataTable_length" aria-controls="dataTable"
                                           className="dt-input form-control form-select">
                                           <option value="5">5</option>
-                                          <option value="10" selected>10</option>
+                                          <option value="10">10</option>
                                           <option value="25">25</option>
                                           <option value="50">50</option>
                                           <option value="100">100</option>
@@ -989,7 +989,7 @@ export default function StudentListPage() {
       <Script
         id="page-student-list-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

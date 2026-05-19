@@ -1228,7 +1228,7 @@ export default function TeacherTimetablePage() {
                           <label htmlFor="timetableDay" className="text-sm fw-semibold text-primary-light d-inline-block mb-8">Day
                           </label>
                           <select id="timetableDay" className="form-control form-select">
-                              <option value="Select a Day" selected disabled>Select a Day</option>
+                              <option value="Select a Day"  disabled>Select a Day</option>
                               <option value="Sunday">Sunday</option>
                               <option value="Monday">Monday</option>
                               <option value="Tuesday">Tuesday</option>
@@ -1245,7 +1245,7 @@ export default function TeacherTimetablePage() {
                               className="text-sm fw-semibold text-primary-light d-inline-block mb-8">Teacher
                           </label>
                           <select id="timetableSelectTeacher" className="form-control form-select">
-                              <option value="Select a teacher" selected disabled>Select a teacher</option>
+                              <option value="Select a teacher" disabled>Select a teacher</option>
                               <option value="John Doe">John Doe</option>
                               <option value="John Alex">John Alex</option>
                               <option value="Bill Gets">Bill Gets</option>
@@ -1257,7 +1257,7 @@ export default function TeacherTimetablePage() {
                           <label htmlFor="selectClass" className="text-sm fw-semibold text-primary-light d-inline-block mb-8">Class
                           </label>
                           <select id="selectClass" className="form-control form-select">
-                              <option value="Select a class" selected disabled>Select a class</option>
+                              <option value="Select a class"  disabled>Select a class</option>
                               <option value="One">One</option>
                               <option value="Two">Two</option>
                               <option value="Three">Three</option>
@@ -1277,7 +1277,7 @@ export default function TeacherTimetablePage() {
                               className="text-sm fw-semibold text-primary-light d-inline-block mb-8">Subject
                           </label>
                           <select id="selectSubject" className="form-control form-select">
-                              <option value="Select a subject" selected disabled>Select a subject</option>
+                              <option value="Select a subject"  disabled>Select a subject</option>
                               <option value="One">One</option>
                               <option value="Two">Two</option>
                               <option value="Three">Three</option>
@@ -1296,7 +1296,7 @@ export default function TeacherTimetablePage() {
                           <label htmlFor="selectRoom" className="text-sm fw-semibold text-primary-light d-inline-block mb-8">Room No
                           </label>
                           <select id="selectRoom" className="form-control form-select">
-                              <option value="Select a Room No" selected disabled>Select a Room No</option>
+                              <option value="Select a Room No"  disabled>Select a Room No</option>
                               <option value="101">101</option>
                               <option value="102">102</option>
                               <option value="103">103</option>
@@ -1335,7 +1335,7 @@ export default function TeacherTimetablePage() {
       <Script
         id="page-teacher-timetable-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

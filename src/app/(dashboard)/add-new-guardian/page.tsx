@@ -158,7 +158,7 @@ export default function AddNewGuardianPage() {
       <Script
         id="page-add-new-guardian-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

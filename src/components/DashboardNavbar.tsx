@@ -144,7 +144,7 @@ export default function DashboardNavbar() {
                   </div>
       
                   <div className="max-h-400-px overflow-y-auto scroll-sm pe-4">
-                    <Link href="javascript:void(0)"
+                    <Link href="#"
                       className="px-24 py-12 d-flex align-items-start gap-3 mb-2 justify-content-between">
                       <div className="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-3">
                         <span
@@ -160,7 +160,7 @@ export default function DashboardNavbar() {
                       <span className="text-sm text-secondary-light flex-shrink-0">23 Mins ago</span>
                     </Link>
       
-                    <Link href="javascript:void(0)"
+                    <Link href="#"
                       className="px-24 py-12 d-flex align-items-start gap-3 mb-2 justify-content-between bg-neutral-50">
                       <div className="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-3">
                         <span
@@ -175,7 +175,7 @@ export default function DashboardNavbar() {
                       <span className="text-sm text-secondary-light flex-shrink-0">23 Mins ago</span>
                     </Link>
       
-                    <Link href="javascript:void(0)"
+                    <Link href="#"
                       className="px-24 py-12 d-flex align-items-start gap-3 mb-2 justify-content-between">
                       <div className="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-3">
                         <span
@@ -190,7 +190,7 @@ export default function DashboardNavbar() {
                       <span className="text-sm text-secondary-light flex-shrink-0">23 Mins ago</span>
                     </Link>
       
-                    <Link href="javascript:void(0)"
+                    <Link href="#"
                       className="px-24 py-12 d-flex align-items-start gap-3 mb-2 justify-content-between bg-neutral-50">
                       <div className="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-3">
                         <span
@@ -205,7 +205,7 @@ export default function DashboardNavbar() {
                       <span className="text-sm text-secondary-light flex-shrink-0">23 Mins ago</span>
                     </Link>
       
-                    <Link href="javascript:void(0)"
+                    <Link href="#"
                       className="px-24 py-12 d-flex align-items-start gap-3 mb-2 justify-content-between">
                       <div className="text-black hover-bg-transparent hover-text-primary d-flex align-items-center gap-3">
                         <span
@@ -222,7 +222,7 @@ export default function DashboardNavbar() {
                   </div>
       
                   <div className="text-center py-12 px-16">
-                    <Link href="javascript:void(0)" className="text-primary-600 fw-semibold text-md hover-underline">See All Notification</Link>
+                    <Link href="#" className="text-primary-600 fw-semibold text-md hover-underline">See All Notification</Link>
                   </div>
       
                 </div>

@@ -758,7 +758,7 @@ export default function FeesDiscountPage() {
       <Script
         id="page-fees-discount-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

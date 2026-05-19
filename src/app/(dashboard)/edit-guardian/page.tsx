@@ -158,7 +158,7 @@ export default function EditGuardianPage() {
       <Script
         id="page-edit-guardian-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );

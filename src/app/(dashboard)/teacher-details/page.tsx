@@ -3535,7 +3535,7 @@ export default function TeacherDetailsPage() {
       <Script
         id="page-teacher-details-inline"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: __inlineScripts }}
+        dangerouslySetInnerHTML={{ __html: "(function(){\n" + __inlineScripts + "\n})();" }}
       />
     </>
   );
