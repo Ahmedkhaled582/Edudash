@@ -159,7 +159,7 @@ export default function GuardianListPage() {
                     <th scope="col">Occupation</th>
                     <th scope="col">Address</th>
                     <th scope="col">Phone Number</th>
-                    <th scope="col">Student ID</th>
+                    <th scope="col">Student Details</th>
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
@@ -192,8 +192,8 @@ export default function GuardianListPage() {
                         <td><span className="text-primary-600">GD-{guardian.id}</span></td>
                         <td>
                           <div className="d-flex align-items-center">
-                            <img src={`/assets/images/thumbs/teacher-avatar-img${(index % 5) + 1}.png`}
-                              alt="Avatar" className="flex-shrink-0 me-12 radius-8" width={32} height={32} />
+                            {/* <img src={guardian.studentProfile}
+                              alt="Avatar" className="flex-shrink-0 me-12 radius-8" width={32} height={32} /> */}
                             <div>
                               <h6 className="text-md mb-0 fw-medium flex-grow-1 text-secondary-light">
                                 {guardian.name}
@@ -207,11 +207,14 @@ export default function GuardianListPage() {
                         <td>{guardian.phone}</td>
                         <td>
                           <div className="d-flex align-items-center">
-                            <img src={`/assets/images/thumbs/avatar-img${(index % 5) + 1}.png`}
+                            <img src={guardian.studentProfile}
                               alt="Student Avatar" className="flex-shrink-0 me-12 radius-8" width={32} height={32} />
                             <div>
                               <h6 className="text-sm mb-0 fw-medium text-secondary-light">
                                 Student ID: {guardian.studentId}
+                              </h6>
+                                                          <h6 className="text-sm mb-0 fw-medium text-secondary-light">
+                                Student Name: {guardian.studentName}
                               </h6>
                             </div>
                           </div>

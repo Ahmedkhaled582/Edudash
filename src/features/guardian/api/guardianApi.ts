@@ -8,6 +8,8 @@ export interface Guardian {
   occupation: string;
   address: string;
   studentId: number;
+  studentName: string;
+  studentProfile: string;
 }
 
 export interface AddGuardianPayload {
