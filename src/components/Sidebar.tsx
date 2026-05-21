@@ -1,7 +1,11 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
 /* Auto-generated from static HTML — preserve class names for theme/CSS */
 import Link from "next/link";
+import { useAuthStore } from "@/store/useAuthStore";
+
 export default function Sidebar() {
+  const { user } = useAuthStore();
   return (
     <>
       <aside className="sidebar">
@@ -28,11 +32,11 @@ export default function Sidebar() {
               className="profile-dropdown__button d-flex align-items-center justify-content-between p-10 w-100 overflow-hidden bg-neutral-50 radius-12 "
               data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
               <span className="d-flex align-items-start gap-10">
-                <img src="/assets/images/thumbs/leave-request-img2.png" alt="Thumbnail"
+                <img src={user?.profileImage} alt="Thumbnail"
                   className="w-40-px h-40-px rounded-circle object-fit-cover flex-shrink-0" />
                 <span className="profile-dropdown__contents">
-                  <span className="h6 mb-0 text-md d-block text-primary-light">Jone Copper</span>
-                  <span className="text-secondary-light text-sm mb-0 d-block">Admin</span>
+                  <span className="h6 mb-0 text-md d-block text-primary-light">{user?.fullName}</span>
+                  <span className="text-secondary-light text-sm mb-0 d-block">{user?.rollNo}</span>
                 </span>
               </span>
               <span className="profile-dropdown__icon pe-8 text-xl d-flex line-height-1">
