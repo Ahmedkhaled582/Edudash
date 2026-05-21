@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useGuardians, useUpdateGuardian } from "@/features/guardian/hooks/useGuardian";
 import { guardianSchema, GuardianFormValues } from "@/features/guardian/schema/guardianSchema";
+import { useToast } from "@/components/Toast";
 
 function EditGuardianForm() {
   const router = useRouter();
@@ -17,6 +18,7 @@ function EditGuardianForm() {
 
   const { data: guardians, isLoading: isLoadingGuardians, error: loadError } = useGuardians();
   const updateGuardianMutation = useUpdateGuardian();
+  const { showToast } = useToast();
 
   const guardian = guardians?.find((g) => g.id === guardianId);
 
@@ -59,8 +61,13 @@ function EditGuardianForm() {
       id: guardianId,
     }, {
       onSuccess: () => {
+        showToast("success", "Guardian Updated", `Successfully updated ${data.relation} "${data.name}"`);
         router.push("/guardian-list");
       },
+      onError: (error: any) => {
+        const errorMsg = error?.response?.data?.message || error?.message || "Failed to update guardian";
+        showToast("error", "Error Updating Guardian", errorMsg);
+      }
     });
   };
 

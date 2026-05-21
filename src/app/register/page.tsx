@@ -11,6 +11,7 @@ import MobileOverlay from "@/components/MobileOverlay";
 import { signupAction } from "@/features/auth/api/auth";
 import { RegisterPayload } from "@/features/auth/types/auth.types";
 import { RegisterFormValues, registerSchema } from "@/features/auth/schema/authSchema";
+import { useToast } from "@/components/Toast";
 
 const ROLE_MAP = {
   "ef50422e-2db4-4330-8bec-429973121fb7": "Parent",
@@ -26,6 +27,7 @@ export default function RegisterPage() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
+  const { showToast } = useToast();
 
   const {
     register,
@@ -131,13 +133,18 @@ export default function RegisterPage() {
     try {
       const res = await signupAction(payload);
       if (res.success) {
+        showToast("success", "Account Created! 🚀", "Registration successful. Please log in.");
         router.push("/login");
         router.refresh();
       } else {
-        setError(res.error || "Registration failed");
+        const errorMsg = res.error || "Registration failed";
+        setError(errorMsg);
+        showToast("error", "Registration Failed", errorMsg);
       }
     } catch (err: any) {
-      setError(err?.message || "An unexpected error occurred");
+      const errorMsg = err?.message || "An unexpected error occurred";
+      setError(errorMsg);
+      showToast("error", "Registration Error", errorMsg);
     }
   };
 

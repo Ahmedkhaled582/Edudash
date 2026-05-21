@@ -4,11 +4,13 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useGuardians, useDeleteGuardian } from "@/features/guardian/hooks/useGuardian";
+import { useToast } from "@/components/Toast";
 
 export default function GuardianListPage() {
   const { data: guardians, isLoading, error } = useGuardians();
   const deleteMutation = useDeleteGuardian();
   const [selectedGuardianId, setSelectedGuardianId] = useState<number | null>(null);
+  const { showToast } = useToast();
 
   // Re-initialize jQuery DataTables when the data changes
   useEffect(() => {
@@ -52,8 +54,11 @@ export default function GuardianListPage() {
 
   const handleDelete = () => {
     if (selectedGuardianId !== null) {
+      const deletedGuardian = guardians?.find((g) => g.id === selectedGuardianId);
+      
       deleteMutation.mutate(selectedGuardianId, {
         onSuccess: () => {
+          showToast("success", "Guardian Deleted", `Successfully deleted ${deletedGuardian?.relation || "Guardian"} "${deletedGuardian?.name || ""}"`);
           // Close modal using Bootstrap instance API
           const modalElement = document.getElementById("exampleModalDelete");
           if (modalElement && typeof window !== "undefined") {
@@ -65,6 +70,10 @@ export default function GuardianListPage() {
           }
           setSelectedGuardianId(null);
         },
+        onError: (error: any) => {
+          const errorMsg = error?.response?.data?.message || error?.message || "Failed to delete guardian";
+          showToast("error", "Error Deleting Guardian", errorMsg);
+        }
       });
     }
   };

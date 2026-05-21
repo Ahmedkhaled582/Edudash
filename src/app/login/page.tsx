@@ -10,6 +10,7 @@ import ThemeCustomization from "@/components/ThemeCustomization";
 import MobileOverlay from "@/components/MobileOverlay";
 import { loginAction } from "@/features/auth/api/auth";
 import { LoginFormValues, loginSchema } from "@/features/auth/schema/authSchema";
+import { useToast } from "@/components/Toast";
 
 
 
@@ -17,6 +18,7 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
+  const { showToast } = useToast();
 
   const {
     register,
@@ -36,14 +38,19 @@ export default function LoginPage() {
     try {
       const res = await loginAction(data);
       if (res.success) {
+        showToast("success", "Welcome Back! 👋", "Logged in successfully.");
         // Redirect to dashboard or home page
         router.push("/");
         router.refresh();
       } else {
-        setError(res.error || "Login failed");
+        const errorMsg = res.error || "Login failed";
+        setError(errorMsg);
+        showToast("error", "Login Failed", errorMsg);
       }
     } catch (err: any) {
-      setError(err?.message || "An unexpected error occurred");
+      const errorMsg = err?.message || "An unexpected error occurred";
+      setError(errorMsg);
+      showToast("error", "Login Error", errorMsg);
     }
   };
 
