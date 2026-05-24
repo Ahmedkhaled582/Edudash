@@ -5,7 +5,7 @@ export default function DashboardFooter() {
     <>
       <footer className="d-footer">
         <div className="">
-          <p className="mb-0 text-center"> &copy; <span className="current-year"></span> Made With ❤️ by Wowtheme7.</p>
+          <p className="mb-0 text-center"> &copy; <span className="current-year"></span> Made by Innovation.</p>
         </div>
       </footer>
     </>

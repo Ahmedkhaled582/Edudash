@@ -3,7 +3,7 @@
 "use server";
 import axios, { AxiosInstance } from "axios";
 import { cookies } from "next/headers";
-const API_URL = "http://192.168.1.4:8080/api/";
+const API_URL = "https://schooliq.runasp.net/api/";
 export const serverAxios: AxiosInstance = axios.create({
   baseURL: API_URL,
   withCredentials: true,

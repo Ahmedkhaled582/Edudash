@@ -1,7 +1,7 @@
 
 import { useAuthStore } from "@/store/useAuthStore";
 import axios, { AxiosInstance } from "axios";
-const API_URL = "http://192.168.1.4:8080";
+const API_URL = "https://schooliq.runasp.net";
 export const clientAxios: AxiosInstance = axios.create({
   baseURL: API_URL,
   headers: { Accept: "application/json" },
