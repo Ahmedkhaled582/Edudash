@@ -60,7 +60,7 @@ export default function LoginPage() {
       <MobileOverlay />
       <div className="d-lg-flex bg-white">
           <div className="w-50 d-lg-flex d-none overflow-hidden">
-              <img src="/assets/images/thumbs/login-img.png" alt="Login Image" className="w-100 h-100 object-fit-cover" />
+              <img src="/assets/images/learn-logo.png" alt="Login Image" className="w-100 h-100 object-fit-cover" />
           </div>
           <div className="lg-w-50 px-24 py-32 d-flex justify-content-center align-items-center">
               <div className="max-w-540-px mx-auto">

@@ -154,7 +154,7 @@ export default function RegisterPage() {
       <MobileOverlay />
       <div className="d-lg-flex bg-white">
           <div className="w-50 d-lg-block d-none overflow-hidden d-flex">
-              <img src="/assets/images/thumbs/login-img.png" alt="Register Image" className="w-100 h-100 object-fit-cover" />
+              <img src="/assets/images/learn-logo.png" alt="Register Image" className="w-100 h-100 object-fit-cover" />
           </div>
           
           <div className="lg-w-50 px-24 py-40 d-flex justify-content-center align-items-center">
