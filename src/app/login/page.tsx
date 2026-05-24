@@ -65,7 +65,7 @@ export default function LoginPage() {
           <div className="lg-w-50 px-24 py-32 d-flex justify-content-center align-items-center">
               <div className="max-w-540-px mx-auto">
                   <Link href="/" className="">
-                      <img src="/assets/images/logo.png" alt="Logo" />
+                      <img className="w-30" src="/assets/images/INNOVATION LOGO.png" alt="Logo" />
                   </Link>
                   <div className="mt-32 mb-32">
                       <h1 className="h6 fw-bold text-primary-light mb-8">

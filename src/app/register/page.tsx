@@ -160,7 +160,7 @@ export default function RegisterPage() {
           <div className="lg-w-50 px-24 py-40 d-flex justify-content-center align-items-center">
               <div className="max-w-540-px mx-auto w-100">
                   <Link href="/">
-                      <img src="/assets/images/logo.png" alt="Logo" />
+                      <img className="w-30" src="/assets/images/INNOVATION LOGO.png" alt="Logo" />
                   </Link>
       
                   <div className="mt-48 mb-32">
