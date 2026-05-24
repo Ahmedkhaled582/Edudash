@@ -61,3 +61,13 @@ export interface RegisterPayload {
   student?: StudentRegisterData;
   teacher?: TeacherRegisterData;
 }
+
+export interface SchoolRegisterPayload {
+  email: string;
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
+  address: string;
+  password: string;
+  roleId: string;
+}

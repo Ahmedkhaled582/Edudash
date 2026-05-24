@@ -1,7 +1,7 @@
 "use server";
 import { cookies } from "next/headers";
 import { AxiosError } from "axios";
-import { AuthActionResult, AuthResponse, RegisterPayload } from "@/features/auth/types/auth.types";
+import { AuthActionResult, AuthResponse, RegisterPayload, SchoolRegisterPayload } from "@/features/auth/types/auth.types";
 import serverAxios from "@/lib/axios/serveraxios";
 
 async function postAuth(
@@ -37,6 +37,9 @@ async function postAuth(
 
 export const signupAction = async (data: RegisterPayload) =>
   postAuth("Accounts/register-user", data);
+
+export const schoolRegisterAction = async (data: SchoolRegisterPayload) =>
+  postAuth("Accounts/school-register", data);
 
 
 export const loginAction = async (data: {

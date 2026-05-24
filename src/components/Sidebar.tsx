@@ -527,6 +527,9 @@ export default function Sidebar() {
                 <li>
                   <Link href="/register"><i className="ri-circle-fill circle-icon text-warning-main w-auto"></i> Register</Link>
                 </li>
+                 <li>
+                  <Link href="/school-register"><i className="ri-circle-fill circle-icon text-warning-main w-auto"></i> School Register</Link>
+                </li>
               </ul>
             </li>
             <li>

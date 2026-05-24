@@ -222,7 +222,7 @@ export default function GuardianListPage() {
                               <h6 className="text-sm mb-0 fw-medium text-secondary-light">
                                 Student ID: {guardian.studentId}
                               </h6>
-                                                          <h6 className="text-sm mb-0 fw-medium text-secondary-light">
+                                <h6 className="text-sm mb-0 fw-medium text-secondary-light">
                                 Student Name: {guardian.studentName}
                               </h6>
                             </div>
